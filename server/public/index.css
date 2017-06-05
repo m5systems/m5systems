@@ -2,7 +2,8 @@
 gulp process */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif; }
 
 div.main--section {
   height: 400px;

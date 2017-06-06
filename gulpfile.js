@@ -53,7 +53,7 @@ gulp.task('lintJS', function() {
 	return gulp.src('./browser/js/**/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('jshint-stylish'));
-})
+});
 
 /**********************************************************/
 /* Development Builds */
@@ -94,8 +94,8 @@ gulp.task('buildHTML', function() {
 gulp.task('watch', function() {
 	livereload.listen(); // reload browser automatically on save
 	gulp.watch('./browser/scss/*', ['buildCSS']);
-	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS']);
-	gulp.watch('./browser/js/**/*.html', ['buildHTML'])
+	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS'])
+	gulp.watch('./browser/js/**/*.html', ['buildHTML']);
 });
 
 /*
@@ -104,4 +104,4 @@ gulp.task('watch', function() {
  * Run buildCSS and buildJS so the app is built/updated without requiring a save
  * in one of the watched files to run the same tasks
  */
-gulp.task('default', ['buildHTML', 'buildCSS', 'lintJS', 'buildJS', 'watch']);
+gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintJS']);

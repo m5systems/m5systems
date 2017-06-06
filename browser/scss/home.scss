@@ -16,7 +16,8 @@ $media-query-two: 900px;
 	}
 
 	&__info {
-		margin: 30px;
+		margin: 30px auto;
+		max-width: 1200px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -60,7 +61,8 @@ $media-query-two: 900px;
 	}
 
 	&__testimonials {
-		margin: 30px;
+		margin: 30px auto;
+		max-width: 1300px;
 		display: flex;
 		justify-content: center;
 

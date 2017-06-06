@@ -14,6 +14,16 @@ app.config(function ($locationProvider, $urlRouterProvider) {
 
 'use strict';
 
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('404', {
+		url: '/404',
+		templateUrl: 'js/404/404.template.min.html'
+	});
+});
+
+'use strict';
+
 app.controller('AboutCtrl', function ($scope) {});
 
 'use strict';
@@ -24,16 +34,6 @@ app.config(function ($stateProvider) {
 		url: '/about-us',
 		templateUrl: 'js/about-us/about-us.template.min.html',
 		controller: 'AboutCtrl'
-	});
-});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('404', {
-		url: '/404',
-		templateUrl: 'js/404/404.template.min.html'
 	});
 });
 
@@ -59,8 +59,20 @@ app.directive('navbar', function ($rootScope, $state) {
 		scope: {},
 		templateUrl: 'js/navbar/navbar.template.min.html',
 
-		link: function (scope) {
-			scope.someVar = "BLAHHHH IS SOME VAR";
-		}
+		link: function (scope) {}
 	};
+});
+
+'use strict';
+
+app.controller('TestimonialsCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('testimonials', {
+		url: '/testimonials',
+		templateUrl: 'js/testimonials/testimonials.template.min.html',
+		controller: 'TestimonialsCtrl'
+	});
 });

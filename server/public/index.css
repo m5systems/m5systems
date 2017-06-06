@@ -1,5 +1,3 @@
-/* Use this file to import all other scss files. This file gets compiled by a
-gulp process */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +11,7 @@ div.main--section {
 
 h2.main--tag {
   margin: 30px;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   color: #58585b; }
 
@@ -39,7 +37,8 @@ button.standard-btn {
   align-items: center; }
 
 .home__info {
-  margin: 30px;
+  margin: 30px auto;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -66,32 +65,33 @@ button.standard-btn {
       width: 150px;
       height: 50px; }
 
-.home__testimonials {
-  margin: 30px;
+.home__testimonials, .testimonials__list {
+  margin: 30px auto;
+  max-width: 1300px;
   display: flex;
   justify-content: center; }
   @media all and (max-width: 1000px) {
-    .home__testimonials {
+    .home__testimonials, .testimonials__list {
       margin: 0 auto;
       max-width: 700px;
       width: 90%;
       flex-direction: column;
       align-items: center; } }
-  .home__testimonials div {
+  .home__testimonials div, .testimonials__list div {
     margin: 30px;
     width: 50%; }
     @media all and (max-width: 1000px) {
-      .home__testimonials div {
+      .home__testimonials div, .testimonials__list div {
         width: 100%;
         max-width: 700px; } }
-    .home__testimonials div p {
+    .home__testimonials div p, .testimonials__list div p {
       line-height: 1.4em; }
-      .home__testimonials div p span {
+      .home__testimonials div p span, .testimonials__list div p span {
         font-style: italic; }
-  .home__testimonials hr {
+  .home__testimonials hr, .testimonials__list hr {
     display: none; }
     @media all and (max-width: 1000px) {
-      .home__testimonials hr {
+      .home__testimonials hr, .testimonials__list hr {
         display: block;
         width: 100%;
         color: black;
@@ -112,6 +112,20 @@ button.standard-btn {
   margin-top: 30px;
   width: 170px;
   height: 50px; }
+
+.testimonials__list {
+  justify-content: flex-start;
+  margin-left: 60px; }
+  @media all and (max-width: 1000px) {
+    .testimonials__list {
+      margin: 30px auto; } }
+  .testimonials__list div {
+    width: 320px; }
+    @media all and (max-width: 1000px) {
+      .testimonials__list div {
+        width: 90%; } }
+  .testimonials__list hr {
+    width: 90%; }
 
 .navbar {
   display: flex;

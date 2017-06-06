@@ -1,0 +1,25 @@
+.testimonials {
+
+	&__list {
+		@extend .home__testimonials;
+		justify-content: flex-start;
+		margin-left: 60px;
+
+		@media all and (max-width: $media-query-one) {
+			margin: 30px auto;
+		}
+
+		div {
+			width: 320px;
+			
+			@media all and (max-width: $media-query-one) {
+				width: 90%;
+			}
+
+		}
+		
+		hr {
+			width: 90%;
+		}
+	}
+}

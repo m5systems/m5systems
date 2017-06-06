@@ -1,5 +1,5 @@
-/* Use this file to import all other scss files. This file gets compiled by a
-gulp process */
+// Use this file to import all other scss files. This file gets compiled by a
+// gulp process
 
 // CSS Rest --> THIS MUST BE THE FIRST CSS IN THE FILE
 * {
@@ -19,7 +19,7 @@ div.main--section {
 // Main title of the page which appears on every page in the main--section
 h2.main--tag {
 	margin: 30px;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: bold;
 	color: rgb(88,88,91);
 }
@@ -43,4 +43,5 @@ button.standard-btn {
 /* Import statements of other SCSS files */
 @import 'home';
 @import 'about-us';
+@import 'testimonials';
 @import 'navbar';

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // Register the angular app
 var app = angular.module('APP_NAME_HERE', ['ui.router']);

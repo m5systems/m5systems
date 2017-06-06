@@ -8,6 +8,7 @@ const ngAnnotate = require('gulp-ng-annotate');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
+const jshint = require('gulp-jshint');
 
 /* NOTE: This requires a chrome extention to work properly:
  * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
@@ -48,6 +49,11 @@ gulp.task('buildProduction', ['buildHTMLProduction', 'buildCSSProduction', 'buil
 
 /**********************************************************/
 
+gulp.task('lintJS', function() {
+	return gulp.src('./browser/js/**/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter('jshint-stylish'));
+})
 
 /**********************************************************/
 /* Development Builds */

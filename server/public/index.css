@@ -114,8 +114,7 @@ button.standard-btn {
   height: 50px; }
 
 .testimonials__list {
-  justify-content: flex-start;
-  margin-left: 60px; }
+  justify-content: flex-start; }
   @media all and (max-width: 1000px) {
     .testimonials__list {
       margin: 30px auto; } }

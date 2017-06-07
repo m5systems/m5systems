@@ -27,7 +27,9 @@
     "path": "^0.12.7",
     "stylelint-order": "^0.4.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  },
   "engines": {
     "node": "6.9.4"
   },
@@ -38,9 +40,12 @@
     "type": "git",
     "url": "git+https://github.com/sbernheim4/angular-stack.git"
   },
+  "pre-commit": [
+	  "test"
+  ],
   "scripts": {
     "postinstall": "gulp buildProduction",
     "start": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp lintCSS && gulp lintJS"
   }
 }

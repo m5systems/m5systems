@@ -8,6 +8,10 @@
 	font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 // main heading sectino that appears on every page which contains the page title
 div.main--section {
 	height: 400px;
@@ -24,7 +28,7 @@ h2.main--tag {
 	color: rgb(88,88,91);
 }
 
-button.standard-btn {
+.standard-btn {
 	border: none;
 	border-radius: 5px;
 	background: rgb(248, 227, 147);
@@ -44,4 +48,5 @@ button.standard-btn {
 @import 'home';
 @import 'about-us';
 @import 'testimonials';
+@import 'solutions-and-services';
 @import 'navbar';

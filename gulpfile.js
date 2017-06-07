@@ -8,10 +8,6 @@ const ngAnnotate = require('gulp-ng-annotate');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
-
-const eslint = require('gulp-eslint');
-
-const jshint = require('gulp-jshint');
 const gulpStylelint = require('gulp-stylelint');
 
 /* NOTE: This requires a chrome extention to work properly:

@@ -8,6 +8,9 @@ const ngAnnotate = require('gulp-ng-annotate');
 const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
+
+const eslint = require('gulp-eslint');
+
 const jshint = require('gulp-jshint');
 const gulpStylelint = require('gulp-stylelint');
 
@@ -50,11 +53,12 @@ gulp.task('buildProduction', ['buildHTMLProduction', 'buildCSSProduction', 'buil
 
 /**********************************************************/
 
-gulp.task('lintJS', function() {
-	return gulp.src('./browser/js/**/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter('jshint-stylish'));
-});
+// gulp.tas, function() {
+// 	return gulp.src('./browser/js/**/*.js')
+// 	.pipe(eslint())
+// 	.pipe(eslint.format())
+// 	.pipe(eslint.failAfterError());
+// });
 
 gulp.task('lintCSS', function() {
 
@@ -105,7 +109,7 @@ gulp.task('buildHTML', function() {
 gulp.task('watch', function() {
 	livereload.listen(); // reload browser automatically on save
 	gulp.watch('./browser/scss/*', ['buildCSS', 'lintCSS']);
-	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS'])
+	gulp.watch('./browser/js/**/*.js', ['buildJS'])
 	gulp.watch('./browser/js/**/*.html', ['buildHTML']);
 });
 
@@ -115,4 +119,4 @@ gulp.task('watch', function() {
  * Run buildCSS and buildJS so the app is built/updated without requiring a save
  * in one of the watched files to run the same tasks
  */
-gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintJS', 'lintCSS']);
+gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintCSS']);

@@ -9,6 +9,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const jshint = require('gulp-jshint');
+const gulpStylelint = require('gulp-stylelint');
 
 /* NOTE: This requires a chrome extention to work properly:
  * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
@@ -53,6 +54,16 @@ gulp.task('lintJS', function() {
 	return gulp.src('./browser/js/**/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('jshint-stylish'));
+});
+
+gulp.task('lintCSS', function() {
+
+  return gulp.src('browser/scss/*.scss')
+  	.pipe(gulpStylelint({
+  		reporters: [
+  			{formatter: 'string', console: true}
+  		]
+    }));
 });
 
 /**********************************************************/

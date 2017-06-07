@@ -49,21 +49,13 @@ gulp.task('buildProduction', ['buildHTMLProduction', 'buildCSSProduction', 'buil
 
 /**********************************************************/
 
-// gulp.tas, function() {
-// 	return gulp.src('./browser/js/**/*.js')
-// 	.pipe(eslint())
-// 	.pipe(eslint.format())
-// 	.pipe(eslint.failAfterError());
-// });
-
 gulp.task('lintCSS', function() {
-
-  return gulp.src('browser/scss/*.scss')
-  	.pipe(gulpStylelint({
-  		reporters: [
-  			{formatter: 'string', console: true}
-  		]
-    }));
+	return gulp.src('./browser/scss/*.scss')
+		.pipe(gulpStylelint({
+			reporters: [
+				{formatter: 'string', console: true}
+			]
+		}));
 });
 
 /**********************************************************/
@@ -73,7 +65,7 @@ gulp.task('buildCSS', function () {
 	// The source scss file is a main file which just imports all the separate scss files
 	return gulp.src('./browser/scss/index.scss')
 		.pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
-		// .pipe(cleanCSS()) // minify the css file
+		.pipe(cleanCSS()) // minify the css file
 		.pipe(gulp.dest('./server/public/')) // write the css file to ./server
 		.pipe(livereload()); // reload browser automatically
 });

@@ -104,7 +104,7 @@ gulp.task('buildHTML', function() {
 /* Watch files to have gulp tasks run automatically when saved */
 gulp.task('watch', function() {
 	livereload.listen(); // reload browser automatically on save
-	gulp.watch('./browser/scss/*', ['buildCSS']);
+	gulp.watch('./browser/scss/*', ['buildCSS', 'lintCSS']);
 	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS'])
 	gulp.watch('./browser/js/**/*.html', ['buildHTML']);
 });
@@ -115,4 +115,4 @@ gulp.task('watch', function() {
  * Run buildCSS and buildJS so the app is built/updated without requiring a save
  * in one of the watched files to run the same tasks
  */
-gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintJS']);
+gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintJS', 'lintCSS']);

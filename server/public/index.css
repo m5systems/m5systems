@@ -50,12 +50,12 @@ h2.main--tag {
       flex-direction: column; } }
   .home__info div {
     margin: 10px;
-    flex: 1;
-    display: flex;
     text-align: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center; }
+    flex: 1; }
     @media all and (max-width: 900px) {
       .home__info div {
         width: 100%; } }
@@ -85,8 +85,8 @@ h2.main--tag {
     width: 50%; }
     @media all and (max-width: 1000px) {
       .home__testimonials div, .testimonials__list div {
-        width: 100%;
-        max-width: 700px; } }
+        max-width: 700px;
+        width: 100%; } }
     .home__testimonials div p, .testimonials__list div p {
       line-height: 1.4em; }
       .home__testimonials div p span, .testimonials__list div p span {
@@ -130,11 +130,11 @@ h2.main--tag {
     width: 90%; }
 
 .solutions-and-services--list {
-  width: 90%;
   margin: 0 auto;
+  width: 90%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
   .solutions-and-services--list div {
     margin: 30px;
     width: 315px;

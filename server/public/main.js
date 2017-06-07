@@ -24,21 +24,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('AboutCtrl', function ($scope) {});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('about-us', {
-		url: '/about-us',
-		templateUrl: 'js/about-us/about-us.template.min.html',
-		controller: 'AboutCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -54,16 +39,16 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('HomeCtrl', function ($scope) {});
+app.controller('AboutCtrl', function ($scope) {});
 
 'use strict';
 
 // Register a state called timer
 app.config(function ($stateProvider) {
-	$stateProvider.state('home', {
-		url: '/',
-		templateUrl: 'js/home/home.template.min.html',
-		controller: 'HomeCtrl'
+	$stateProvider.state('about-us', {
+		url: '/about-us',
+		templateUrl: 'js/about-us/about-us.template.min.html',
+		controller: 'AboutCtrl'
 	});
 });
 
@@ -76,6 +61,21 @@ app.directive('navbar', function ($rootScope, $state) {
 
 		link: function (scope) {}
 	};
+});
+
+'use strict';
+
+app.controller('HomeCtrl', function ($scope) {});
+
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('home', {
+		url: '/',
+		templateUrl: 'js/home/home.template.min.html',
+		controller: 'HomeCtrl'
+	});
 });
 
 'use strict';

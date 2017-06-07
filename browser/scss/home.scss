@@ -40,13 +40,18 @@ $media-query-two: 900px;
 
 
 			a {
-				img	{
+
+				&:hover {
+					border: 2px solid $m5-yellow;
+				}
+				img {
 
 				}
 			}
 
 			h3 {
 				margin: 15px;
+				text-transform: uppercase;
 			}
 
 			p {

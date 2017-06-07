@@ -1,6 +1,8 @@
 // Use this file to import all other scss files. This file gets compiled by a
 // gulp process
 
+$m5-yellow: rgb(248, 227, 147);
+
 // CSS Rest --> THIS MUST BE THE FIRST CSS IN THE FILE
 * {
 	margin: 0;
@@ -31,7 +33,7 @@ h2.main--tag {
 .standard-btn {
 	border: none;
 	border-radius: 5px;
-	background: rgb(248, 227, 147);
+	background-color: $m5-yellow;
 	color: white;
 	font-size: 1em;
 	font-weight: bold;
@@ -49,4 +51,5 @@ h2.main--tag {
 @import 'about-us';
 @import 'testimonials';
 @import 'solutions-and-services';
+@import 'contact-us';
 @import 'navbar';

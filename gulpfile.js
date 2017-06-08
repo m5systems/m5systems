@@ -68,10 +68,10 @@ gulp.task('lintCSS', () => {
 });
 
 
-gulp.task('print-lint', function() {
-	console.log(chalk.green('----------------------'))
-	console.log(chalk.green("|       Linting      |"));
-	console.log(chalk.green('----------------------'))
+gulp.task('print-lint', () => {
+	console.log(chalk.green('\t----------------------'));
+	console.log(chalk.green('\t|       Linting      |'));
+	console.log(chalk.green('\t----------------------'));
 });
 /**********************************************************/
 /* Development Builds */

@@ -41,12 +41,13 @@
 		"url": "git+https://github.com/sbernheim4/angular-stack.git"
 	},
 	"pre-commit": [
-		"gulp print-lint",
+		"print-info",
 		"test"
 	],
 	"scripts": {
 		"postinstall": "gulp buildProduction",
 		"start": "nodemon server/index.js",
-		"test": "gulp lintCSS && gulp lintJS"
+		"test": "gulp lintCSS && gulp lintJS",
+		"print-info": "gulp print-lint"
 	}
 }

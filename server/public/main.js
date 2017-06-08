@@ -39,6 +39,21 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.controller('HomeCtrl', function ($scope) {});
+
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('home', {
+		url: '/',
+		templateUrl: 'js/home/home.template.min.html',
+		controller: 'HomeCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -54,16 +69,16 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('HomeCtrl', function ($scope) {});
+app.controller('SolutionsAndServicesCtrl', function ($scope) {});
 
 'use strict';
 
 // Register a state called timer
 app.config(function ($stateProvider) {
-	$stateProvider.state('home', {
-		url: '/',
-		templateUrl: 'js/home/home.template.min.html',
-		controller: 'HomeCtrl'
+	$stateProvider.state('solutions-and-services', {
+		url: '/solutions-and-services',
+		templateUrl: 'js/solutions-and-services/solutions-and-services.template.min.html',
+		controller: 'SolutionsAndServicesCtrl'
 	});
 });
 
@@ -76,21 +91,6 @@ app.directive('navbar', function ($rootScope, $state) {
 
 		link: function (scope) {}
 	};
-});
-
-'use strict';
-
-app.controller('SolutionsAndServicesCtrl', function ($scope) {});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('solutions-and-services', {
-		url: '/solutions-and-services',
-		templateUrl: 'js/solutions-and-services/solutions-and-services.template.min.html',
-		controller: 'SolutionsAndServicesCtrl'
-	});
 });
 
 'use strict';

@@ -137,4 +137,4 @@ gulp.task('watch', () => {
  * Run buildCSS and buildJS so the app is built/updated without requiring a save
  * in one of the watched files to run the same tasks
  */
-gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lintCSS']);
+gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lint']);

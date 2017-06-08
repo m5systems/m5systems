@@ -10,6 +10,7 @@ const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const gulpStylelint = require('gulp-stylelint');
+const chalk = require('chalk');
 
 /* NOTE: This requires a chrome extention to work properly:
  * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
@@ -67,17 +68,11 @@ gulp.task('lintCSS', () => {
 });
 
 
-// gulp.task('print-info', function() {
-// 	console.log(`
-//   ____      ____    U _____ u       ____   U  ___ u  __  __    __  __              _____         ____   _   _  U _____ u   ____   _  __
-// U|  _"\ uU |  _"\ u \| ___"|/    U /"___|   \/"_ \/U|' \/ '|uU|' \/ '|u   ___     |_ " _|     U /"___| |'| |'| \| ___"|/U /"___| |"|/ /
-// \| |_) |/ \| |_) |/  |  _|"      \| | u     | | | |\| |\/| |/\| |\/| |/  |_"_|      | |       \| | u  /| |_| |\ |  _|"  \| | u   | ' /
-//  |  __/    |  _ <    | |___       | |/__.-,_| |_| | | |  | |  | |  | |    | |      /| |\       | |/__ U|  _  |u | |___   | |/__U/| . \\u
-//  |_|       |_| \_\   |_____|       \____|\_)-\___/  |_|  |_|  |_|  |_|  U/| |\u   u |_|U        \____| |_| |_|  |_____|   \____| |_|\_\
-//  ||>>_     //   \\_  <<   >>      _// \\      \\   <<,-,,-.  <<,-,,-..-,_|___|_,-._// \\_      _// \\  //   \\  <<   >>  _// \\,-,>> \\,-.
-// (__)__)   (__)  (__)(__) (__)    (__)(__)    (__)   (./  \.)  (./  \.)\_)-' '-(_/(__) (__)    (__)(__)(_") ("_)(__) (__)(__)(__)\.)   (_/ `);
-// };
-
+gulp.task('print-lint', function() {
+	console.log(chalk.green('----------------------'))
+	console.log(chalk.green("|       Linting      |"));
+	console.log(chalk.green('----------------------'))
+});
 /**********************************************************/
 /* Development Builds */
 

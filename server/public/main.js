@@ -2,7 +2,7 @@
 
 // Register the angular app
 
-var app = angular.module('APP_NAME_HERE', ['ui.router']);
+const app = angular.module('APP_NAME_HERE', ['ui.router']);
 
 app.config(function ($locationProvider, $urlRouterProvider) {
 	// allow for real urls and not hashbang urls --> EX: /timer instead of /#timer
@@ -24,6 +24,21 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.controller('AboutCtrl', function ($scope) {});
+
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('about-us', {
+		url: '/about-us',
+		templateUrl: 'js/about-us/about-us.template.min.html',
+		controller: 'AboutCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -39,16 +54,16 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('AboutCtrl', function ($scope) {});
+app.controller('HomeCtrl', function ($scope) {});
 
 'use strict';
 
 // Register a state called timer
 app.config(function ($stateProvider) {
-	$stateProvider.state('about-us', {
-		url: '/about-us',
-		templateUrl: 'js/about-us/about-us.template.min.html',
-		controller: 'AboutCtrl'
+	$stateProvider.state('home', {
+		url: '/',
+		templateUrl: 'js/home/home.template.min.html',
+		controller: 'HomeCtrl'
 	});
 });
 
@@ -61,21 +76,6 @@ app.directive('navbar', function ($rootScope, $state) {
 
 		link: function (scope) {}
 	};
-});
-
-'use strict';
-
-app.controller('HomeCtrl', function ($scope) {});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('home', {
-		url: '/',
-		templateUrl: 'js/home/home.template.min.html',
-		controller: 'HomeCtrl'
-	});
 });
 
 'use strict';
@@ -104,5 +104,19 @@ app.config(function ($stateProvider) {
 		url: '/testimonials',
 		templateUrl: 'js/testimonials/testimonials.template.min.html',
 		controller: 'TestimonialsCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('MigrationToCloudCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('migration-to-cloud', {
+		url: '/solutions-and-services/migration-to-cloud',
+		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
+		controller: 'MigrationToCloudCtrl'
 	});
 });

@@ -115,7 +115,7 @@ gulp.task('buildHTML', () => {
 gulp.task('watch', () => {
 	livereload.listen(); // reload browser automatically on save
 	gulp.watch('./browser/scss/*', ['buildCSS', 'lintCSS']);
-	gulp.watch('./browser/js/**/*.js', ['buildJS'])
+	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS'])
 	gulp.watch('./browser/js/**/*.html', ['buildHTML']);
 });
 

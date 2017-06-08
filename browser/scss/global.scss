@@ -1,0 +1,39 @@
+// Variables
+//--------------------------
+$m5-yellow: rgb(248, 227, 147);
+
+// Common Styling
+//--------------------------
+
+// Main heading section that appears on every page which contains the page title
+div.main--section {
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Main title of the page which appears on every page in the main--section
+h2.main--tag {
+	margin: 30px;
+	font-size: 2em;
+	font-weight: bold;
+	color: rgb(88,88,91);
+}
+
+// Common styling for all buttons on the website
+.standard-btn {
+	border: none;
+	border-radius: 5px;
+	background-color: $m5-yellow;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color .3s;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: black;
+	}
+}

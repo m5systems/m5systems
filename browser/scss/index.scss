@@ -1,8 +1,6 @@
 // Use this file to import all other scss files. This file gets compiled by a
 // gulp process
 
-$m5-yellow: rgb(248, 227, 147);
-
 // CSS Rest --> THIS MUST BE THE FIRST CSS IN THE FILE
 * {
 	margin: 0;
@@ -14,39 +12,8 @@ a {
 	text-decoration: none;
 }
 
-// main heading sectino that appears on every page which contains the page title
-div.main--section {
-	height: 400px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-// Main title of the page which appears on every page in the main--section
-h2.main--tag {
-	margin: 30px;
-	font-size: 2em;
-	font-weight: bold;
-	color: rgb(88,88,91);
-}
-
-.standard-btn {
-	border: none;
-	border-radius: 5px;
-	background-color: $m5-yellow;
-	color: white;
-	font-size: 1em;
-	font-weight: bold;
-	cursor: pointer;
-	transition: background-color .3s;
-	text-transform: uppercase;
-
-	&:hover {
-		background-color: black;
-	}
-}
-
 /* Import statements of other SCSS files */
+@import 'global';
 @import 'home';
 @import 'about-us';
 @import 'testimonials';

@@ -72,9 +72,15 @@ gulp.task('lintCSS', () => {
 
 
 gulp.task('print-lint', () => {
-	console.log(chalk.green('\t----------------------'));
-	console.log(chalk.green('\t|       Linting      |'));
-	console.log(chalk.green('\t----------------------'));
+	console.log(chalk.green(`
+==================================================
+o      o  o   o  o-----o  o  o   o    o----o
+|      |  |\\  |     |     |  |\\  |  \/
+|      |  | \\ |     |     |  | \\ | o    o---o
+|      |  |  \\|     |     |  |  \\|  \\     |
+o---o  o  o   o     o     o  o   o   o----o
+==================================================
+	`));
 });
 /**********************************************************/
 /* Development Builds */

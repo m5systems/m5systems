@@ -53,6 +53,19 @@ gulp.task('buildHTMLProduction', () => {
 gulp.task('buildProduction', ['buildHTMLProduction', 'buildCSSProduction', 'buildJSProduction']);
 
 /**********************************************************/
+//Linting functions
+
+function printLint() {
+	console.log(chalk.green(`
+==================================================
+o      o  o   o  o-----o  o  o   o    o----o
+|      |  |\\  |     |     |  |\\  |  \/
+|      |  | \\ |     |     |  | \\ | o    o---o
+|      |  |  \\|     |     |  |  \\|  \\     |
+o---o  o  o   o     o     o  o   o   o----o
+==================================================
+	`));
+};
 
 gulp.task('lintJS', () => {
 	return gulp.src('./browser/js/**/*.js')
@@ -70,18 +83,11 @@ gulp.task('lintCSS', () => {
 		}));
 });
 
-
-gulp.task('print-lint', () => {
-	console.log(chalk.green(`
-==================================================
-o      o  o   o  o-----o  o  o   o    o----o
-|      |  |\\  |     |     |  |\\  |  \/
-|      |  | \\ |     |     |  | \\ | o    o---o
-|      |  |  \\|     |     |  |  \\|  \\     |
-o---o  o  o   o     o     o  o   o   o----o
-==================================================
-	`));
-});
+gulp.task('lint', () => {
+	printLint();
+	gulp.start('lintJS');
+	gulp.start('lintCSS');
+})
 /**********************************************************/
 /* Development Builds */
 

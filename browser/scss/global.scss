@@ -1,6 +1,9 @@
 // Variables
 //--------------------------
-$m5-yellow: rgb(248, 227, 147);
+$m5-blue: rgb(52, 177, 172);
+$m5-red: rgb(177, 52, 56);
+
+$footer-height: 160px;
 
 // Common Styling
 //--------------------------
@@ -10,8 +13,9 @@ $m5-yellow: rgb(248, 227, 147);
 // Used for each `page` --> Each page is contained in a section tag
 .standard__section {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 1200px;
 	width: 90%;
+	min-height: calc(100vh - #{$footer-height} - 90px);
 }
 
 // Top part of every page that contains the page title
@@ -40,7 +44,7 @@ $m5-yellow: rgb(248, 227, 147);
 .standard-btn {
 	border: none;
 	border-radius: 5px;
-	background-color: $m5-yellow;
+	background-color: $m5-blue;
 	color: white;
 	font-size: 1em;
 	font-weight: bold;
@@ -49,6 +53,6 @@ $m5-yellow: rgb(248, 227, 147);
 	text-transform: uppercase;
 
 	&:hover {
-		background-color: black;
+		background-color: $m5-red;
 	}
 }

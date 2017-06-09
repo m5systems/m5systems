@@ -1,0 +1,33 @@
+.footer {
+	position: absolute;
+	width: 100vw;
+	height: $footer-height;
+	background-color: rgb(49, 54, 61);
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	&__info {
+
+		p {
+			margin: 10px;
+		}
+	}
+
+	&__social-media {
+		display: flex;
+		align-items: center;
+
+		i {
+			margin: 20px;
+			font-size: 40px;
+		}
+
+		&__contact-us {
+			@extend .standard-btn;
+			width: 180px;
+			height: 45px;
+		}
+	}
+}

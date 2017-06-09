@@ -113,7 +113,7 @@ gulp.task('buildCSS', () => {
     	.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
         .pipe(cleanCSS()) // minify the css file
-        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.write('./sourcemaps/'))
         .pipe(gulp.dest('./server/public/')) // write the css file to ./server
         .pipe(livereload()); // reload browser automatically
 });
@@ -123,7 +123,7 @@ gulp.task('buildJS', () => {
     	.pipe(sourcemaps.init()) // use sourcemaps
         .pipe(concat('main.js')) // write all the files to a single file called main.js
         .pipe(babel()) // run babel to use ES6 syntax
-        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.write('./sourcemaps/'))
         .pipe(gulp.dest('./server/public')) // write the result of this to ./server/public
         .pipe(livereload()); // reload browser automatically
 });

@@ -31,21 +31,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('AboutCtrl', function ($scope) {});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('about-us', {
-		url: '/about-us',
-		templateUrl: 'js/about-us/about-us.template.min.html',
-		controller: 'AboutCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -56,6 +41,21 @@ app.config(function ($stateProvider) {
 		url: '/contact-us',
 		templateUrl: 'js/contact-us/contact-us.template.min.html',
 		controller: 'ContactUsCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('AboutCtrl', function ($scope) {});
+
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('about-us', {
+		url: '/about-us',
+		templateUrl: 'js/about-us/about-us.template.min.html',
+		controller: 'AboutCtrl'
 	});
 });
 
@@ -116,15 +116,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('MigrationToCloudCtrl', function ($scope) {});
+app.controller('CloudConsultingCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('migration-to-cloud', {
-		url: '/solutions-and-services/migration-to-cloud',
-		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
-		controller: 'MigrationToCloudCtrl'
+	$stateProvider.state('cloud-consulting', {
+		url: '/solutions-and-services/cloud-consulting',
+		templateUrl: 'js/solutions-and-services/cloud-consulting/cloud-consulting.template.min.html',
+		controller: 'CloudConsultingCtrl'
 	});
 });
 

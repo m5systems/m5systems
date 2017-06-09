@@ -1,4 +1,4 @@
-.migration-to-cloud {
+.cloud-consulting {
 	@extend .standard__section;
 
 	div	{
@@ -9,7 +9,7 @@
 		}
 	}
 
-	&--info{
+	&__info{
 		@extend .description;
 	}
 }

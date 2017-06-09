@@ -80,6 +80,20 @@ app.directive('navbar', function ($rootScope, $state) {
 
 'use strict';
 
+app.controller('TestimonialsCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('testimonials', {
+		url: '/testimonials',
+		templateUrl: 'js/testimonials/testimonials.template.min.html',
+		controller: 'TestimonialsCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('SolutionsAndServicesCtrl', function ($scope) {});
 
 'use strict';
@@ -95,15 +109,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('TestimonialsCtrl', function ($scope) {});
+app.controller('MigrationToCloudCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('testimonials', {
-		url: '/testimonials',
-		templateUrl: 'js/testimonials/testimonials.template.min.html',
-		controller: 'TestimonialsCtrl'
+	$stateProvider.state('migration-to-cloud', {
+		url: '/solutions-and-services/migration-to-cloud',
+		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
+		controller: 'MigrationToCloudCtrl'
 	});
 });
 
@@ -123,14 +137,28 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('MigrationToCloudCtrl', function ($scope) {});
+app.controller('TPMCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('migration-to-cloud', {
-		url: '/solutions-and-services/migration-to-cloud',
-		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
-		controller: 'MigrationToCloudCtrl'
+	$stateProvider.state('tpm', {
+		url: '/solutions-and-services/technical-project-management',
+		templateUrl: 'js/solutions-and-services/tpm/tpm.template.min.html',
+		controller: 'TPMCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('WirelessNetworksCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('wireless-networks', {
+		url: '/solutions-and-services/wireless-networks',
+		templateUrl: 'js/solutions-and-services/wireless-networks/wireless-networks.template.min.html',
+		controller: 'WirelessNetworksCtrl'
 	});
 });

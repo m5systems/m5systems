@@ -8,7 +8,8 @@
 		"angular": true,
 		"$scope": true,
 		"scope": true,
-		"$state": true
+		"$state": true,
+		"document": true;
 	},
 
 	"rules": {

@@ -32,12 +32,10 @@ gulp.task('buildCSSProduction', () => {
 
 gulp.task('buildJSProduction', () => {
     return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
-        .pipe(sourcemaps.init()) // use sourcemaps
         .pipe(concat('main.js')) // write all the files to a single file called main.js
         .pipe(babel()) // run babel to use ES6 syntax
         .pipe(ngAnnotate()) // not quite sure what this does
         .pipe(uglify()) // minify the js
-        .pipe(sourcemaps.write('./')) // write the source map
         .pipe(gulp.dest('./server/public')) // write the result of this to ./server/public
 });
 
@@ -112,16 +110,20 @@ gulp.task('lint', () => {
 gulp.task('buildCSS', () => {
     // The source scss file is a main file which just imports all the separate scss files
     return gulp.src('./browser/scss/index.scss')
+    	.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
         .pipe(cleanCSS()) // minify the css file
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./server/public/')) // write the css file to ./server
         .pipe(livereload()); // reload browser automatically
 });
 
 gulp.task('buildJS', () => {
     return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
+    	.pipe(sourcemaps.init()) // use sourcemaps
         .pipe(concat('main.js')) // write all the files to a single file called main.js
         .pipe(babel()) // run babel to use ES6 syntax
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./server/public')) // write the result of this to ./server/public
         .pipe(livereload()); // reload browser automatically
 });

@@ -1,15 +1,15 @@
-.migration-to-cloud {
+.network-and-datacenter-virtualization {
 	@extend .standard__section;
 
-	div	{
+	&__header {
 		@extend .standard__header;
 
-		h2 {
+		&__title {
 			@extend .standard__title;
 		}
 	}
 
-	&--info{
+	&__info{
 		@extend .description;
 	}
 }

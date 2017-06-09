@@ -1,10 +1,17 @@
 .about-us {
+	@extend .standard__section;
 
-	.main--tag {
-		font-size: 2.25em;
-		font-weight: bold;
-		text-transform: uppercase;
+	&--header{
+		@extend .standard__header;
+
+		&--title {
+			@extend .standard__title;
+			font-size: 2.25em;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
 	}
+
 
 	.about-us__descriptions	{
 		p {
@@ -15,9 +22,9 @@
 		}
 
 		button {
+			@extend .standard-btn;
 			margin-top: 30px;
-			width: 170px;
-			height: 50px;
+			padding: 10px 20px;
 		}
 	}
 }

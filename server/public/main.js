@@ -109,20 +109,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('MigrationToCloudCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('migration-to-cloud', {
-		url: '/solutions-and-services/migration-to-cloud',
-		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
-		controller: 'MigrationToCloudCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';
@@ -132,5 +118,19 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/network-and-datacenter-virtualization',
 		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
 		controller: 'NetworkAndDatacenterVirtualizationCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('MigrationToCloudCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('migration-to-cloud', {
+		url: '/solutions-and-services/migration-to-cloud',
+		templateUrl: 'js/solutions-and-services/migration-to-cloud/migration-to-cloud.template.min.html',
+		controller: 'MigrationToCloudCtrl'
 	});
 });

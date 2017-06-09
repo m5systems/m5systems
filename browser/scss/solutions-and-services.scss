@@ -1,4 +1,14 @@
 .solutions-and-services {
+	@extend .standard__section;
+	max-width: 1300px;
+
+	&--header {
+		@extend .standard__header;
+
+		&--title {
+			@extend .standard__title;
+		}
+	}
 
 	&--list {
 		margin: 0 auto;
@@ -24,6 +34,7 @@
 			}
 
 			a {
+				@extend .standard-btn;
 				margin-top: 15px;
 				text-align: center;
 				padding: 10px 25px;

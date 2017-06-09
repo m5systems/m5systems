@@ -1,7 +1,16 @@
 $media-query-one: 1000px;
 $media-query-two: 900px;
 
-.home{
+.home {
+	@extend .standard__section;
+
+	&__header {
+		@extend .standard__header;
+
+		&__title {
+			@extend .standard__title;
+		}
+	}
 
 	&__main {
 		width: 100vw;
@@ -60,6 +69,7 @@ $media-query-two: 900px;
 			}
 
 			button {
+				@extend .standard-btn;
 				width: 150px;
 				height: 50px;
 			}

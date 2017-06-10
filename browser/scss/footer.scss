@@ -11,9 +11,9 @@
 	@media all and (max-width: 850px) {
 		height: 250px;
 		text-align: center;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
 	}
 
 	&__info {

@@ -8,6 +8,14 @@
 	justify-content: space-around;
 	align-items: center;
 
+	@media all and (max-width: 850px) {
+		height: 250px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
 	&__info {
 
 		p {

@@ -59,17 +59,6 @@ app.config(function ($stateProvider) {
 	});
 });
 
-app.directive('footer', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/footer/footer.template.min.html',
-
-		link: function (scope) {}
-	};
-});
-
 'use strict';
 
 app.controller('HomeCtrl', function ($scope) {});
@@ -83,6 +72,17 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/home/home.template.min.html',
 		controller: 'HomeCtrl'
 	});
+});
+
+app.directive('footer', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/footer/footer.template.min.html',
+
+		link: function (scope) {}
+	};
 });
 
 app.directive('navbar', function ($rootScope, $state) {
@@ -127,20 +127,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('CloudConsultingCtrl', function ($scope) {});
 
 'use strict';
@@ -150,6 +136,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/cloud-consulting',
 		templateUrl: 'js/solutions-and-services/cloud-consulting/cloud-consulting.template.min.html',
 		controller: 'CloudConsultingCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
 	});
 });
 

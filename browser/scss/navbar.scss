@@ -3,7 +3,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	div {
+	&__logo {
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__links {
 		display: flex;
 		justify-content: center;
 
@@ -11,11 +18,5 @@
 			padding: 30px;
 			cursor: pointer;
 		}
-	}
-
-	&__logo {
-	}
-
-	&__links {
 	}
 }

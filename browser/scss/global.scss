@@ -24,6 +24,7 @@ a {
 
 // Top part of every page that contains the page title
 .standard__header {
+	margin: 30px;
 	height: 300px;
 	display: flex;
 	justify-content: center;
@@ -32,7 +33,6 @@ a {
 
 // Main title of the page which appears on every page in the header
 .standard__title {
-	margin: 30px;
 	font-size: 2em;
 	font-weight: bold;
 	color: rgb(88,88,91);

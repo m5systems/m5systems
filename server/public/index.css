@@ -15,13 +15,13 @@ a {
   min-height: calc(100vh - 160px - 87px); }
 
 .standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting div, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
+  margin: 30px;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .standard__title, .home__header__title, .about-us--header--title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting div h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
-  margin: 30px;
   font-size: 2em;
   font-weight: bold;
   color: #58585b;
@@ -183,6 +183,13 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media all and (max-width: 850px) {
+    .footer {
+      height: 250px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; } }
   .footer__info p {
     margin: 10px; }
   .footer__social-media {
@@ -199,10 +206,12 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  .navbar div {
+  .navbar__logo:hover {
+    cursor: pointer; }
+  .navbar__links {
     display: flex;
     justify-content: center; }
-    .navbar div p {
+    .navbar__links p {
       padding: 30px;
       cursor: pointer; }
 

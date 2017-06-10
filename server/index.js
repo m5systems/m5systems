@@ -8,6 +8,7 @@ const app = express();
 const port = process.env.PORT || 1337;
 
 // folder to serve public files --> css, img, etc
+// Folders inside public and the files inside them are also available --> Works recursively
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*

@@ -24,7 +24,7 @@ a {
 
 // Top part of every page that contains the page title
 .standard__header {
-	height: 400px;
+	height: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -40,7 +40,8 @@ a {
 }
 
 .description {
-	margin: 30px;
+	margin: 30px auto;
+	width: 900px;
 	line-height: 1.6em;
 }
 

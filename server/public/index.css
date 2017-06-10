@@ -25,7 +25,8 @@ a {
   font-size: 2em;
   font-weight: bold;
   color: #58585b;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  text-transform: uppercase; }
 
 .description, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
@@ -118,8 +119,7 @@ a {
 
 .about-us--header--title {
   font-size: 2.25em;
-  font-weight: bold;
-  text-transform: uppercase; }
+  font-weight: bold; }
 
 .about-us .about-us__descriptions {
   margin-bottom: 40px; }
@@ -200,7 +200,8 @@ a {
   flex-direction: row;
   justify-content: space-between; }
   .navbar div {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
     .navbar div p {
       padding: 30px;
       cursor: pointer; }

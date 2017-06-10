@@ -112,7 +112,7 @@ gulp.task('buildCSS', () => {
     return gulp.src('./browser/scss/index.scss')
     	.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
-        .pipe(cleanCSS()) // minify the css file
+        // .pipe(cleanCSS()) // minify the css file
         .pipe(sourcemaps.write('./sourcemaps/'))
         .pipe(gulp.dest('./server/public/')) // write the css file to ./server
         .pipe(livereload()); // reload browser automatically

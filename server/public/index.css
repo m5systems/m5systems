@@ -12,7 +12,7 @@ a {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
-  min-height: calc(100vh - 160px - 90px); }
+  min-height: calc(100vh - 160px - 87px); }
 
 .standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting div, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   height: 300px;
@@ -29,7 +29,7 @@ a {
 
 .description, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
-  width: 900px;
+  width: 800px;
   line-height: 1.6em; }
 
 .standard-btn, .home__info div button, .about-us .about-us__descriptions button, .solutions-and-services__list div a, .footer__social-media__contact-us {

@@ -127,15 +127,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('CloudConsultingCtrl', function ($scope) {});
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('cloud-consulting', {
-		url: '/solutions-and-services/cloud-consulting',
-		templateUrl: 'js/solutions-and-services/cloud-consulting/cloud-consulting.template.min.html',
-		controller: 'CloudConsultingCtrl'
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
 	});
 });
 
@@ -155,15 +155,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
+app.controller('CloudConsultingCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
+	$stateProvider.state('cloud-consulting', {
+		url: '/solutions-and-services/cloud-consulting',
+		templateUrl: 'js/solutions-and-services/cloud-consulting/cloud-consulting.template.min.html',
+		controller: 'CloudConsultingCtrl'
 	});
 });
 

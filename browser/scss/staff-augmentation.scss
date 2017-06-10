@@ -1,0 +1,17 @@
+.staff-augmentation {
+	@extend .standard__section;
+
+	&__header {
+		@extend .standard__header;
+
+		&__title {
+			@extend .standard__title;
+
+		}
+	}
+
+	&__info {
+		@extend .description;
+
+	}
+}

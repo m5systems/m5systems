@@ -85,6 +85,17 @@ app.config(function ($stateProvider) {
 	});
 });
 
+app.directive('navbar', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/navbar/navbar.template.min.html',
+
+		link: function (scope) {}
+	};
+});
+
 'use strict';
 
 app.controller('SolutionsAndServicesCtrl', function ($scope) {});
@@ -98,17 +109,6 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/solutions-and-services/solutions-and-services.template.min.html',
 		controller: 'SolutionsAndServicesCtrl'
 	});
-});
-
-app.directive('navbar', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/navbar/navbar.template.min.html',
-
-		link: function (scope) {}
-	};
 });
 
 'use strict';
@@ -141,20 +141,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('NetworkInfrastructureCtrl', function ($scope) {});
 
 'use strict';
@@ -169,6 +155,20 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('NetworkSecurityCtrl', function ($scope) {});
 
 'use strict';
@@ -178,6 +178,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/network-security',
 		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
 		controller: 'NetworkSecurityCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('StaffAugmentationCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('staff-augmentation', {
+		url: '/solutions-and-services/staff-augmentation',
+		templateUrl: 'js/solutions-and-services/staff-augmentation/staff-augmentation.template.min.html',
+		controller: 'StaffAugmentationCtrl'
 	});
 });
 

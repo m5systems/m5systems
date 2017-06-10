@@ -8,10 +8,6 @@
 	font-family: 'Noto Sans', sans-serif;
 }
 
-a {
-	text-decoration: none;
-}
-
 /* Import statements of other SCSS files */
 @import 'global';
 @import 'home';
@@ -23,5 +19,6 @@ a {
 @import 'network-and-datacenter-virtualization';
 @import 'tpm';
 @import 'wireless-networks';
+@import 'network-infrastructure';
 @import 'footer';
 @import 'navbar';

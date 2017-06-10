@@ -115,8 +115,8 @@ $media-query-two: 900px;
 			@media all and (max-width: $media-query-one) {
 				display: block;
 				width: 100%;
-				color: black;
 				background: black;
+				color: black;
 			}
 		}
 

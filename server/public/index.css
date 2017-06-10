@@ -14,19 +14,19 @@ a {
   width: 90%;
   min-height: calc(100vh - 160px - 87px); }
 
-.standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting div, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
+.standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   margin: 30px;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.standard__title, .home__header__title, .about-us--header--title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting div h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
+.standard__title, .home__header__title, .about-us--header--title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
   font-size: 2em;
   font-weight: bold;
+  text-transform: uppercase;
   color: #58585b;
-  line-height: 1.3em;
-  text-transform: uppercase; }
+  line-height: 1.3em; }
 
 .description, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
@@ -34,15 +34,15 @@ a {
   line-height: 1.6em; }
 
 .standard-btn, .home__info div button, .about-us .about-us__descriptions button, .solutions-and-services__list div a, .footer__social-media__contact-us {
+  background-color: #34b1ac;
   border: none;
   border-radius: 5px;
-  background-color: #34b1ac;
-  color: white;
   font-size: 1em;
+  text-transform: uppercase;
+  color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color .3s;
-  text-transform: uppercase; }
+  transition: background-color .3s; }
   .standard-btn:hover, .home__info div button:hover, .about-us .about-us__descriptions button:hover, .solutions-and-services__list div a:hover, .footer__social-media__contact-us:hover {
     background-color: #b13438; }
 
@@ -114,8 +114,8 @@ a {
       .home__testimonials hr, .testimonials__list hr {
         display: block;
         width: 100%;
-        color: black;
-        background: black; } }
+        background: black;
+        color: black; } }
 
 .about-us--header--title {
   font-size: 2.25em;
@@ -176,6 +176,7 @@ a {
 
 .footer {
   position: absolute;
+  margin-top: 60px;
   width: 100vw;
   height: 160px;
   background-color: #31363d;
@@ -190,14 +191,17 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: center; } }
-  .footer__info p {
+  .footer__info p, .footer__info address {
     margin: 10px; }
   .footer__social-media {
     display: flex;
     align-items: center; }
     .footer__social-media i {
-      margin: 20px;
+      margin: 20px 20px 20px 0;
       font-size: 40px; }
+      @media all and (max-width: 350px) {
+        .footer__social-media i {
+          margin: 15px 15px 15px 0; } }
     .footer__social-media__contact-us {
       width: 180px;
       height: 45px; }

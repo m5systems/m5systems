@@ -1,5 +1,6 @@
 .footer {
 	position: absolute;
+	margin-top: 60px;
 	width: 100vw;
 	height: $footer-height;
 	background-color: rgb(49, 54, 61);
@@ -18,7 +19,7 @@
 
 	&__info {
 
-		p {
+		p, address {
 			margin: 10px;
 		}
 	}
@@ -28,8 +29,12 @@
 		align-items: center;
 
 		i {
-			margin: 20px;
+			margin: 20px 20px 20px 0;
 			font-size: 40px;
+
+			@media all and (max-width: 350px) {
+				margin: 15px 15px 15px 0;
+			}
 		}
 
 		&__contact-us {

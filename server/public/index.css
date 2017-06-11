@@ -8,20 +8,20 @@ a {
   text-decoration: none; }
 
 /** NOTE: The properties below should ONLY be extended with SCSS **/
-.standard__section, .home, .about-us, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation {
+.standard__section, .home, .about-us, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .404 {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
   min-height: calc(100vh - 160px - 60px - 87px); }
 
-.standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
+.standard__header, .home__header, .about-us__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   margin: 30px;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.standard__title, .home__header__title, .about-us--header--title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
+.standard__title, .home__header__title, .about-us__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -117,7 +117,7 @@ a {
         background: black;
         color: black; } }
 
-.about-us--header--title {
+.about-us__header__title {
   font-size: 2.25em;
   font-weight: bold; }
 

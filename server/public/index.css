@@ -12,7 +12,7 @@ a {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
-  min-height: calc(100vh - 160px - 87px); }
+  min-height: calc(100vh - 160px - 60px - 87px); }
 
 .standard__header, .home__header, .about-us--header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   margin: 30px;

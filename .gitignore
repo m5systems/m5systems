@@ -1,6 +1,4 @@
 *.log
 *.swp
-*.jpg
-*.png
 node_modules/
 .DS_Store

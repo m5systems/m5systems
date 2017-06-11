@@ -6,6 +6,8 @@ const compression = require('compression');
 const express = require('express');
 const app = express();
 
+app.use(compression());
+
 const port = process.env.PORT || 1337;
 const cacheTime = 31536000000; // One Year
 

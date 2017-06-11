@@ -1,7 +1,18 @@
 .testimonials {
+	@extend .standard__section;
+
+	&__header {
+		@extend .standard__header;
+
+
+		&__title {
+			@extend .standard__title;
+		}
+	}
 
 	&__list {
 		@extend .home__testimonials;
+		margin: 30px;
 		justify-content: flex-start;
 
 		@media all and (max-width: $media-query-one) {

@@ -213,10 +213,31 @@ a {
   .navbar__logo:hover {
     cursor: pointer; }
   .navbar__links {
+    margin-top: 60px;
     display: flex;
     justify-content: center; }
-    .navbar__links p {
-      padding: 30px;
+    .navbar__links .dropdowns .dropdown {
+      margin: 0 20px;
+      width: 120px; }
+      .navbar__links .dropdowns .dropdown:hover .dropdown__content {
+        display: block; }
+      .navbar__links .dropdowns .dropdown:hover .dropdown__title {
+        border-bottom: 1px solid #34b1ac; }
+      .navbar__links .dropdowns .dropdown__content {
+        display: none;
+        margin-top: 20px;
+        text-align: center; }
+        .navbar__links .dropdowns .dropdown__content p {
+          margin: 0;
+          text-align: center;
+          cursor: pointer; }
+      .navbar__links .dropdowns .dropdown__title p {
+        margin: 0;
+        text-align: center;
+        cursor: pointer; }
+    .navbar__links__text {
+      width: 200px;
+      text-align: center;
       cursor: pointer; }
 
 /*# sourceMappingURL=sourcemaps/index.css.map */

@@ -4,9 +4,22 @@
 	</div>
 
 	<div class="navbar__links">
-		<p ui-sref="about-us">About Us</p>
-		<p ui-sref="cloud-consulting">Cloud Consulting</p>
-		<p ui-sref="solutions-and-services">Other Services</p>
+
+		<div class="dropdowns">
+
+			<div class="dropdown">
+				<div class="dropdown__title">
+					<p ui-sref="about-us">About Us</p>
+				</div>
+				<div class="dropdown__content">
+					<p ui-sref="testimonials">Testimonials</p>
+				</div>
+			</div>
+
+		</div>
+
+		<p class="navbar__links__text" ui-sref="cloud-consulting">Cloud Consulting</p>
+		<p class="navbar__links__text" ui-sref="solutions-and-services">Other Services</p>
 	</div>
 
 </nav>

@@ -11,11 +11,53 @@
 	}
 
 	&__links {
+		margin-top: 60px;
 		display: flex;
 		justify-content: center;
 
-		p {
-			padding: 30px;
+		.dropdowns {
+
+			.dropdown {
+				margin: 0 20px;
+				width: 120px;
+
+				&:hover {
+					.dropdown__content {
+						display: block;
+					}
+
+					.dropdown__title {
+						border-bottom: 1px solid $m5-blue;
+
+					}
+				}
+
+				&__content {
+					display: none;
+					margin-top: 20px;
+					text-align: center;
+
+					p {
+						margin: 0;
+						text-align: center;
+						cursor: pointer;
+					}
+				}
+
+				&__title {
+					p {
+						margin: 0;
+						text-align: center;
+						cursor: pointer;
+					}
+				}
+
+			}
+		}
+
+		&__text {
+			width: 200px;
+			text-align: center;
 			cursor: pointer;
 		}
 	}

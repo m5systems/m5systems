@@ -3,7 +3,11 @@
 $m5-blue: rgb(52, 177, 172);
 $m5-red: rgb(177, 52, 56);
 
+$navbar-height: 150px;
+
 $footer-height: 160px;
+$footer-height-two: 250px;
+$footer-media-query: 850px;
 
 a {
 	text-decoration: none;
@@ -19,7 +23,10 @@ a {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 90%;
-	min-height: calc(100vh - #{$footer-height} - 60px - 87px);
+	min-height: calc(100vh - #{$footer-height} - 60px - #{$navbar-height});
+	@media all and (max-width: $footer-media-query) {
+		min-height: calc(100vh - #{$footer-height-two} - 60px - #{$navbar-height})
+	}
 }
 
 // Top part of every page that contains the page title

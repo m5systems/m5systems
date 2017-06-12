@@ -9,8 +9,8 @@
 	justify-content: space-around;
 	align-items: center;
 
-	@media all and (max-width: 850px) {
-		height: 250px;
+	@media all and (max-width: $footer-media-query) {
+		height: $footer-height-two;
 		text-align: center;
 		flex-direction: column;
 		justify-content: center;

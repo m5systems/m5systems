@@ -8,7 +8,7 @@ a {
   text-decoration: none; }
 
 /** NOTE: The properties below should ONLY be extended with SCSS **/
-.standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .404 {
+.standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
@@ -240,5 +240,3 @@ a {
       width: 200px;
       text-align: center;
       cursor: pointer; }
-
-/*# sourceMappingURL=sourcemaps/index.css.map */

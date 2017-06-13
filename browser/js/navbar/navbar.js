@@ -10,11 +10,6 @@ app.directive('navbar', function($rootScope, $state) {
 			scope.displayLinks = function() {
 				document.querySelector('.bottom').classList.toggle('active');
 			}
-
-			scope.goToState = function (stateVal) {
-				document.querySelector('.bottom').classList.remove('active');
-				$state.go(stateVal);
-			}
 		}
 	};
 });

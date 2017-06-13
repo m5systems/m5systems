@@ -37,9 +37,6 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@media all and (max-width: $navbar-media-query) {
-		height: 150px;
-	}
 }
 
 // Main title of the page which appears on every page in the header

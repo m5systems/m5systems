@@ -414,9 +414,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
-  @media all and (max-width: 850px) {
-    .standard__header, .home__header, .about-us__header, .testimonials__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
-      height: 150px; } }
 
 .standard__title, .home__header__title, .about-us__header__title, .testimonials__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header__title, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
   font-size: 2em;

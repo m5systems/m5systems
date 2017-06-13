@@ -4,6 +4,7 @@ $m5-blue: rgb(52, 177, 172);
 $m5-red: rgb(177, 52, 56);
 
 $navbar-height: 150px;
+$navbar-media-query: 850px;
 
 $footer-height: 160px;
 $footer-height-two: 250px;
@@ -36,6 +37,9 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media all and (max-width: $navbar-media-query) {
+		height: 150px;
+	}
 }
 
 // Main title of the page which appears on every page in the header

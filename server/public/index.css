@@ -425,9 +425,10 @@ a {
   color: #58585b;
   line-height: 1.3em; }
 
-.description, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
+.description, .about-us .about-us__descriptions, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
-  width: 800px;
+  max-width: 800px;
+  width: 85%;
   line-height: 1.6em; }
 
 .standard-btn, .home__info div button, .about-us .about-us__descriptions button, .solutions-and-services__list div a, .footer__social-media__contact-us {
@@ -511,14 +512,13 @@ a {
   font-size: 2.25em;
   font-weight: bold; }
 
-.about-us .about-us__descriptions {
-  margin-bottom: 40px; }
-  .about-us .about-us__descriptions p {
-    margin: 15px auto;
-    line-height: 1.5em; }
-  .about-us .about-us__descriptions button {
-    margin-top: 30px;
-    padding: 10px 20px; }
+.about-us .about-us__descriptions p {
+  margin: 15px auto;
+  line-height: 1.5em; }
+
+.about-us .about-us__descriptions button {
+  margin-top: 30px;
+  padding: 10px 20px; }
 
 .testimonials__list {
   margin: 30px;
@@ -595,6 +595,7 @@ a {
       width: 180px;
       height: 45px; }
 
+/*********************************************************/
 .navbar {
   height: 150px;
   display: flex;
@@ -603,7 +604,7 @@ a {
   @media all and (max-width: 850px) {
     .navbar {
       display: none; } }
-  .navbar__logo:hover {
+  .navbar__logo {
     cursor: pointer; }
   .navbar__links {
     margin-top: 60px;
@@ -633,6 +634,7 @@ a {
       text-align: center;
       cursor: pointer; }
 
+/*********************************************************/
 .mobile-navbar {
   display: none; }
 
@@ -643,6 +645,8 @@ a {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
+      .mobile-navbar .top .mobile-navbar__logo {
+        cursor: pointer; }
       .mobile-navbar .top .mobile-navbar__fa-icon {
         margin: 30px; }
         .mobile-navbar .top .mobile-navbar__fa-icon i {

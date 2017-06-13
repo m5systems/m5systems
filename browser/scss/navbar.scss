@@ -1,3 +1,6 @@
+/*********************************************************/
+// Desktop Navbar SCSS
+
 .navbar {
 	height: $navbar-height;
 	display: flex;
@@ -9,10 +12,7 @@
 	}
 
 	&__logo {
-
-		&:hover {
-			cursor: pointer;
-		}
+		cursor: pointer;
 	}
 
 	&__links {
@@ -68,6 +68,9 @@
 	}
 }
 
+/*********************************************************/
+// Mobile Navbar SCSS
+
 .mobile-navbar {
 	display: none;
 }
@@ -80,6 +83,10 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+
+			.mobile-navbar__logo {
+				cursor: pointer;
+			}
 
 			.mobile-navbar__fa-icon {
 				margin: 30px;
@@ -108,7 +115,6 @@
 			transform: translateY(0);
 
 			.mobile-navbar__links {
-
 				display: flex;
 				flex-direction: column;
 				justify-content: center;

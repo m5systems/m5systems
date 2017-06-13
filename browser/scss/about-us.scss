@@ -13,7 +13,7 @@
 
 
 	.about-us__descriptions	{
-		margin-bottom: 40px;
+		@extend .description;
 
 		p {
 			margin: 15px auto;

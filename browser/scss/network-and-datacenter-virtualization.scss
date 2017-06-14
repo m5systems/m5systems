@@ -3,6 +3,7 @@
 
 	&__header {
 		@extend .standard__header;
+		background-image: url("images/network-and-datacenter-virtualization-header.jpg");
 
 		&__title {
 			@extend .standard__title;

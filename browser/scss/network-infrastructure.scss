@@ -3,9 +3,11 @@
 
 	&__header {
 		@extend .standard__header;
+		background-image: url("images/network-infrastructure-header.jpg");
 
 		&__title {
-			@extend .standard__title
+			@extend .standard__title;
+			color: white;
 		}
 	}
 

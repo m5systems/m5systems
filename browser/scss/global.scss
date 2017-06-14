@@ -33,8 +33,10 @@ a {
 
 // Top part of every page that contains the page title
 .standard__header {
-	margin: 30px;
-	height: 300px;
+	margin-bottom: 30px;
+	height: 400px;
+	background-size: cover;
+	font-size: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,7 +47,8 @@ a {
 	font-size: 2em;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: rgb(88,88,91);
+	color: white;
+	text-align: center;
 	line-height: 1.3em;
 }
 

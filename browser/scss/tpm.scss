@@ -3,6 +3,7 @@
 
 	&__header {
 		@extend .standard__header;
+		background-image: url("images/tpm-header.jpg");
 
 		&__title {
 			@extend .standard__title;

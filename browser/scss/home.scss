@@ -9,6 +9,7 @@ $media-query-two: 900px;
 
 		&__title {
 			@extend .standard__title;
+			color: rgb(88,88,91);
 		}
 	}
 

@@ -406,7 +406,7 @@ a {
   min-height: calc(100vh - 160px - 60px - 150px); }
   @media all and (max-width: 850px) {
     .standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
-      min-height: calc(100vh - 250px - 60px - 150px); } }
+      min-height: calc(100vh - 250px - 60px - 110px); } }
 
 .standard__header, .home__header, .about-us__header, .testimonials__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   margin: 30px;
@@ -415,16 +415,17 @@ a {
   justify-content: center;
   align-items: center; }
 
-.standard__title, .home__header__title, .about-us__header__title, .testimonials__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header h2, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
+.standard__title, .home__header__title, .about-us__header__title, .testimonials__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header__title, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
   color: #58585b;
   line-height: 1.3em; }
 
-.description, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
+.description, .about-us .about-us__descriptions, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
-  width: 800px;
+  max-width: 800px;
+  width: 85%;
   line-height: 1.6em; }
 
 .standard-btn, .home__info div button, .about-us .about-us__descriptions button, .solutions-and-services__list div a, .footer__social-media__contact-us {
@@ -508,16 +509,13 @@ a {
   font-size: 2.25em;
   font-weight: bold; }
 
-.about-us .about-us__descriptions {
-  margin-bottom: 40px; }
-  .about-us .about-us__descriptions p {
-    margin: 15px auto;
-    max-width: 700px;
-    width: 80%;
-    line-height: 1.5em; }
-  .about-us .about-us__descriptions button {
-    margin-top: 30px;
-    padding: 10px 20px; }
+.about-us .about-us__descriptions p {
+  margin: 15px auto;
+  line-height: 1.5em; }
+
+.about-us .about-us__descriptions button {
+  margin-top: 30px;
+  padding: 10px 20px; }
 
 .testimonials__list {
   margin: 30px;
@@ -594,15 +592,20 @@ a {
       width: 180px;
       height: 45px; }
 
+/*********************************************************/
 .navbar {
   height: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  .navbar__logo:hover {
+  justify-content: space-between;
+  align-items: center; }
+  @media all and (max-width: 850px) {
+    .navbar {
+      display: none; } }
+  .navbar__logo {
+    margin-left: 30px;
     cursor: pointer; }
   .navbar__links {
-    margin-top: 60px;
     display: flex;
     justify-content: center; }
     .navbar__links .dropdowns .dropdown {
@@ -628,5 +631,46 @@ a {
       width: 200px;
       text-align: center;
       cursor: pointer; }
+
+/*********************************************************/
+.mobile-navbar {
+  display: none; }
+
+@media all and (max-width: 850px) {
+  .mobile-navbar {
+    display: block; }
+    .mobile-navbar .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .mobile-navbar .top .mobile-navbar__logo {
+        margin-left: 30px;
+        cursor: pointer; }
+      .mobile-navbar .top .mobile-navbar__fa-icon {
+        margin: 30px; }
+        .mobile-navbar .top .mobile-navbar__fa-icon i {
+          font-size: 50px;
+          cursor: pointer; }
+    .mobile-navbar .bottom {
+      opacity: 0;
+      height: 0;
+      transform: translateY(-70px);
+      transition: all .3s; }
+      .mobile-navbar .bottom .mobile-navbar__links {
+        display: none; }
+    .mobile-navbar .active {
+      height: 150px;
+      opacity: 1;
+      transform: translateY(0); }
+      .mobile-navbar .active .mobile-navbar__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .mobile-navbar .active .mobile-navbar__links p {
+          margin: 5px;
+          font-size: 22px;
+          cursor: pointer; } }
 
 /*# sourceMappingURL=sourcemaps/index.css.map */

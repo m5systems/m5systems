@@ -4,7 +4,7 @@
 	&__header {
 		@extend .standard__header;
 
-		h2 {
+		&__title {
 			@extend .standard__title;
 		}
 	}

@@ -21,5 +21,27 @@
 		<p class="navbar__links__text" ui-sref="cloud-consulting">Cloud Consulting</p>
 		<p class="navbar__links__text" ui-sref="solutions-and-services">Other Services</p>
 	</div>
+</nav>
+
+<nav class="mobile-navbar">
+
+	<div class="top">
+		<div class="mobile-navbar__logo">
+			<img ui-sref="home" src="images/m5-logo.png">
+		</div>
+
+		<div class="mobile-navbar__fa-icon">
+			<i ng-click="displayLinks()" class="fa fa-bars"></i>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div class="mobile-navbar__links">
+			<p ui-sref='about-us"'>About Us</p>
+			<p ui-sref="testimonials">Testimonials</p>
+			<p ui-sref="cloud-consulting">Cloud Consulting</p>
+			<p ui-sref="solutions-and-services">Other Services</p>
+		</div>
+	</div>
 
 </nav>

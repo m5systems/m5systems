@@ -12,11 +12,10 @@ app.config(function($locationProvider, $urlRouterProvider) {
 });
 
 app.run(function ($rootScope) {
+	// This brings the window to the top of the page after a state change --> Otherwise the page stays the same distance from the top of the screen as it was on the previous state.
 	$rootScope.$on('$stateChangeSuccess', function() {
-		// This brings the window to the top of the page after a state change --> Otherwise the page stays the same distance from the top of the screen as it was on the previous state.
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
 
-		// After any state change close the mobile navbar
-		document.querySelector('.bottom').classList.remove('active');
+		var nav = document.querySelector('.bottom').classList.remove('active');
 	});
 });

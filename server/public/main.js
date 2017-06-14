@@ -46,6 +46,20 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.controller('CloudConsultingCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('cloud-consulting', {
+		url: '/cloud-consulting',
+		templateUrl: 'js/cloud-consulting/cloud-consulting.template.min.html',
+		controller: 'CloudConsultingCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -70,17 +84,6 @@ app.directive('footer', function ($rootScope, $state) {
 	};
 });
 
-app.directive('navbar', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/navbar/navbar.template.min.html',
-
-		link: function (scope) {}
-	};
-});
-
 'use strict';
 
 app.controller('HomeCtrl', function ($scope) {});
@@ -94,6 +97,17 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/home/home.template.min.html',
 		controller: 'HomeCtrl'
 	});
+});
+
+app.directive('navbar', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/navbar/navbar.template.min.html',
+
+		link: function (scope) {}
+	};
 });
 
 'use strict';
@@ -127,15 +141,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('CloudConsultingCtrl', function ($scope) {});
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('cloud-consulting', {
-		url: '/solutions-and-services/cloud-consulting',
-		templateUrl: 'js/solutions-and-services/cloud-consulting/cloud-consulting.template.min.html',
-		controller: 'CloudConsultingCtrl'
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
 	});
 });
 
@@ -169,20 +183,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('StaffAugmentationCtrl', function ($scope) {});
 
 'use strict';
@@ -197,20 +197,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('WirelessNetworksCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('wireless-networks', {
-		url: '/solutions-and-services/wireless-networks',
-		templateUrl: 'js/solutions-and-services/wireless-networks/wireless-networks.template.min.html',
-		controller: 'WirelessNetworksCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('TPMCtrl', function ($scope) {});
 
 'use strict';
@@ -220,6 +206,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/technical-project-management',
 		templateUrl: 'js/solutions-and-services/tpm/tpm.template.min.html',
 		controller: 'TPMCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('WirelessNetworksCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('wireless-networks', {
+		url: '/solutions-and-services/wireless-networks',
+		templateUrl: 'js/solutions-and-services/wireless-networks/wireless-networks.template.min.html',
+		controller: 'WirelessNetworksCtrl'
 	});
 });
 //# sourceMappingURL=sourcemaps/main.js.map

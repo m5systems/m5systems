@@ -15,7 +15,6 @@ app.run(function ($rootScope) {
 	// This brings the window to the top of the page after a state change --> Otherwise the page stays the same distance from the top of the screen as it was on the previous state.
 	$rootScope.$on('$stateChangeSuccess', function() {
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-		var nav = document.querySelector('.bottom').classList.remove('active');
+		document.querySelector('.bottom').classList.remove('active');
 	});
 });

@@ -473,38 +473,6 @@ a {
       width: 150px;
       height: 50px; }
 
-.home__testimonials, .testimonials__list {
-  margin: 30px auto;
-  max-width: 1300px;
-  display: flex;
-  justify-content: center; }
-  @media all and (max-width: 1000px) {
-    .home__testimonials, .testimonials__list {
-      margin: 0 auto;
-      max-width: 700px;
-      width: 90%;
-      flex-direction: column;
-      align-items: center; } }
-  .home__testimonials div, .testimonials__list div {
-    margin: 30px;
-    width: 50%; }
-    @media all and (max-width: 1000px) {
-      .home__testimonials div, .testimonials__list div {
-        max-width: 700px;
-        width: 100%; } }
-    .home__testimonials div p, .testimonials__list div p {
-      line-height: 1.4em; }
-      .home__testimonials div p span, .testimonials__list div p span {
-        font-style: italic; }
-  .home__testimonials hr, .testimonials__list hr {
-    display: none; }
-    @media all and (max-width: 1000px) {
-      .home__testimonials hr, .testimonials__list hr {
-        display: block;
-        width: 100%;
-        background: black;
-        color: black; } }
-
 .about-us__header__title {
   font-size: 2.25em;
   font-weight: bold; }
@@ -519,17 +487,43 @@ a {
 
 .testimonials__list {
   margin: 30px;
+  max-width: 1300px;
+  display: flex;
   justify-content: flex-start; }
   @media all and (max-width: 1000px) {
     .testimonials__list {
       margin: 30px auto; } }
+  @media all and (max-width: 1000px) {
+    .testimonials__list {
+      margin: 0 auto;
+      max-width: 700px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center; } }
+  .testimonials__list div {
+    margin: 30px;
+    width: 50%; }
+    @media all and (max-width: 1000px) {
+      .testimonials__list div {
+        max-width: 700px;
+        width: 100%; } }
+    .testimonials__list div p {
+      line-height: 1.4em; }
+      .testimonials__list div p span {
+        font-style: italic; }
+    .testimonials__list div hr {
+      display: none; }
+      @media all and (max-width: 1000px) {
+        .testimonials__list div hr {
+          display: block;
+          width: 100%;
+          background: black;
+          color: black; } }
   .testimonials__list div {
     width: 320px; }
     @media all and (max-width: 1000px) {
       .testimonials__list div {
         width: 90%; } }
-  .testimonials__list hr {
-    width: 90%; }
 
 .solutions-and-services {
   max-width: 1600px; }

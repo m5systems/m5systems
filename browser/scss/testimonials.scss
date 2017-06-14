@@ -11,25 +11,58 @@
 	}
 
 	&__list {
-		@extend .home__testimonials;
 		margin: 30px;
+		max-width: 1300px;
+		display: flex;
 		justify-content: flex-start;
 
 		@media all and (max-width: $media-query-one) {
 			margin: 30px auto;
 		}
 
+		@media all and (max-width: $media-query-one) {
+			margin: 0 auto;
+			max-width: 700px;
+			width: 90%;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		div {
+			margin: 30px;
+			width: 50%;
+			@media all and (max-width: $media-query-one) {
+				max-width: 700px;
+				width: 100%;
+			}
+
+			p {
+				line-height: 1.4em;
+				span {
+					font-style: italic;
+				}
+			}
+
+			img {
+
+			}
+
+			hr {
+				display: none;
+				@media all and (max-width: $media-query-one) {
+					display: block;
+					width: 100%;
+					background: black;
+					color: black;
+				}
+			}
+		}
+
 		div {
 			width: 320px;
-
 			@media all and (max-width: $media-query-one) {
 				width: 90%;
 			}
-
-		}
-
-		hr {
-			width: 90%;
 		}
 	}
 }

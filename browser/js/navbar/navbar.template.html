@@ -1,3 +1,5 @@
+<!-- Desktop Navbar Below -->
+
 <nav class='navbar'>
 	<div class='navbar__logo'>
 		<img ui-sref='home' src="images/m5-logo.png">
@@ -6,7 +8,6 @@
 	<div class='navbar__links'>
 
 		<div class='dropdowns'>
-
 			<div class='dropdown'>
 				<div class='dropdown__title'>
 					<p ui-sref='about-us'>About Us</p>
@@ -15,13 +16,31 @@
 					<p ui-sref='testimonials'>Testimonials</p>
 				</div>
 			</div>
-
 		</div>
 
 		<p class='navbar__links__text' ui-sref='cloud-consulting'>Cloud Consulting</p>
-		<p class='navbar__links__text' ui-sref='solutions-and-services'>Other Services</p>
+
+		<div class='dropdowns'>
+			<div class='dropdown dropdown--extra-wide'>
+				<div class='dropdown__title'>
+					<p ui-sref='solutions-and-services'>Other Services</p>
+				</div>
+				<div class='dropdown__content'>
+					<p ui-sref='network-infrastructure'>Network Infrastructure</p>
+					<p ui-sref='wireless-networks'>Wireless Networks</p>
+					<p ui-sref='network-security'>Network Security</p>
+					<p ui-sref='network-and-datacenter-virtualization'>Network and Datacenter Virtualization</p>
+					<p ui-sref='tpm'>Technical Project Management</p>
+					<p ui-sref='staff-augmentation'>Staff Augmentation</p>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 </nav>
+
+<!-- Mobile Navbar Below -->
 
 <nav class='mobile-navbar'>
 

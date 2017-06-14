@@ -9,7 +9,7 @@ const app = express();
 app.use(compression());
 
 const port = process.env.PORT || 1337;
-const cacheTime = 31536000000; // One Year
+const cacheTime = 43200000; // 12 hours
 
 // folder to serve public files --> css, img, etc
 // Folders inside public and the files inside them are also available --> Works recursively

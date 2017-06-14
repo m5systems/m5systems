@@ -594,11 +594,11 @@ a {
 
 /*********************************************************/
 .navbar {
+  margin-top: 30px;
   height: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: space-between; }
   @media all and (max-width: 850px) {
     .navbar {
       display: none; } }
@@ -606,6 +606,7 @@ a {
     margin-left: 30px;
     cursor: pointer; }
   .navbar__links {
+    margin-top: 30px;
     display: flex;
     justify-content: center; }
     .navbar__links .dropdowns .dropdown {

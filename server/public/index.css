@@ -2,173 +2,215 @@
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans', sans-serif;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 /* Document
 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-
 html {
   line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
+  /* 2 */ }
 
 /* Sections
 ========================================================================== */
-
 /**
  * Remove the margin in all browsers (opinionated).
  */
-
 body {
-  margin: 0;
-}
+  margin: 0; }
 
 /**
  * Add the correct display in IE 9-.
  */
-
-footer,header,nav,section {
-  display: block;
-}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-
 h1 {
   margin: 0.67em 0;
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 /* Grouping content
 ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
 
 /**
  * Add the correct margin in IE 8.
  */
+figure {
+  margin: 1em 40px; }
 
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-
 hr {
   box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /* Text-level semantics
 ========================================================================== */
-
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-
 a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
+b,
+strong {
+  font-weight: inherit; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+b,
+strong {
+  font-weight: bolder; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /**
  * Add the correct font style in Android 4.3-.
  */
+dfn {
+  font-style: italic; }
 
 /**
  * Add the correct background and color in IE 9-.
  */
+mark {
+  background-color: #ff0;
+  color: #000; }
 
 /**
  * Add the correct font size in all browsers.
  */
-
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
 
 /* Embedded content
 ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
+audio,
+video {
+  display: inline-block; }
 
 /**
  * Add the correct display in iOS 4-7.
  */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
 /**
  * Remove the border on images inside links in IE 10-.
  */
-
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 /**
  * Hide the overflow in IE.
  */
+svg:not(:root) {
+  overflow: hidden; }
 
 /* Forms
 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
-
-button {
+button,
+input,
+optgroup,
+select,
+textarea {
   margin: 0;
   /* 2 */
   font-family: sans-serif;
@@ -176,60 +218,62 @@ button {
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
-  /* 1 */
-}
+  /* 1 */ }
 
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-
-button {
+button,
+input {
   /* 1 */
-  overflow: visible;
-}
+  overflow: visible; }
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-
-button {
+button,
+select {
   /* 1 */
-  text-transform: none;
-}
+  text-transform: none; }
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-
-button,html [type="button"],[type="reset"],[type="submit"] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
-
-button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   padding: 0;
-  border-style: none;
-}
+  border-style: none; }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
-
-button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
 
 /**
  * Correct the padding in Firefox.
  */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -237,147 +281,154 @@ button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusri
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
+legend {
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  white-space: normal;
+  /* 1 */ }
 
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
 /**
  * Remove the default vertical scrollbar in IE.
  */
+textarea {
+  overflow: auto; }
 
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-
-[type="checkbox"],[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-
-[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-
-[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */
-}
+  /* 2 */ }
 
 /* Interactive
 ========================================================================== */
-
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
+details,
+menu {
+  display: block; }
 
 /*
  * Add the correct display in all browsers.
  */
+summary {
+  display: list-item; }
 
 /* Scripting
 ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
+canvas {
+  display: inline-block; }
 
 /**
  * Add the correct display in IE.
  */
+template {
+  display: none; }
 
 /* Hidden
 ========================================================================== */
-
 /**
  * Add the correct display in IE 10-.
  */
-
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 /* Import statements of other SCSS files */
-
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /** NOTE: The properties below should ONLY be extended with SCSS **/
-
-.standard__section,.home,.about-us,.testimonials,.contact-us,.solutions-and-services,.cloud-consulting,.network-and-datacenter-virtualization,.tpm,.wireless-networks,.network-infrastructure,.network-security,.staff-augmentation,.error {
+.standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
-  min-height: calc(100vh - 160px - 60px - 150px);
-}
+  min-height: calc(100vh - 160px - 60px - 150px); }
+  @media all and (max-width: 850px) {
+    .standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
+      min-height: calc(100vh - 250px - 60px - 110px); } }
 
-@media all and (max-width: 850px) {
-  .standard__section,  .home,  .about-us,  .testimonials,  .contact-us,  .solutions-and-services,  .cloud-consulting,  .network-and-datacenter-virtualization,  .tpm,  .wireless-networks,  .network-infrastructure,  .network-security,  .staff-augmentation,  .error {
-    min-height: calc(100vh - 250px - 60px - 110px);
-  }
-}
-
-.standard__header,.home__header,.about-us__header,.testimonials__header,.contact-us__header,.solutions-and-services--header,.cloud-consulting__header,.network-and-datacenter-virtualization__header,.tpm__header,.wireless-networks__header,.network-infrastructure__header,.network-security__header,.staff-augmentation__header {
+.standard__header, .home__header, .about-us__header, .testimonials__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
   margin: 30px;
   height: 300px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
-.standard__title,.home__header__title,.about-us__header__title,.testimonials__header__title,.contact-us__header__title,.solutions-and-services--header--title,.cloud-consulting__header__title,.network-and-datacenter-virtualization__header__title,.tpm__header__title,.wireless-networks__header__title,.network-infrastructure__header__title,.network-security__header__title,.staff-augmentation__header__title {
+.standard__title, .home__header__title, .about-us__header__title, .testimonials__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header__title, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
   color: #58585b;
-  line-height: 1.3em;
-}
+  line-height: 1.3em; }
 
-.about-us .about-us__descriptions,.cloud-consulting__info,.network-and-datacenter-virtualization__info,.tpm__info,.wireless-networks__info,.network-infrastructure__info,.network-security__info,.staff-augmentation__info {
+.description, .about-us .about-us__descriptions, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
   max-width: 800px;
   width: 85%;
-  line-height: 1.6em;
-}
+  line-height: 1.6em; }
 
-.home__info div button,.about-us .about-us__descriptions button,.solutions-and-services__list div a,.footer__social-media__contact-us {
+.standard-btn, .home__info div button, .about-us .about-us__descriptions button, .solutions-and-services__list div a, .footer__social-media__contact-us {
   background-color: #34b1ac;
   border: none;
   border-radius: 5px;
@@ -386,184 +437,130 @@ a {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color .3s;
-}
-
-.home__info div button:hover,.about-us .about-us__descriptions button:hover,.solutions-and-services__list div a:hover,.footer__social-media__contact-us:hover {
-  background-color: #b13438;
-}
+  transition: background-color .3s; }
+  .standard-btn:hover, .home__info div button:hover, .about-us .about-us__descriptions button:hover, .solutions-and-services__list div a:hover, .footer__social-media__contact-us:hover {
+    background-color: #b13438; }
 
 .home__info {
   margin: 30px auto;
   max-width: 1200px;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-@media all and (max-width: 900px) {
-  .home__info {
-    flex-direction: column;
-  }
-}
-
-.home__info div {
-  margin: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-@media all and (max-width: 900px) {
+  align-items: center; }
+  @media all and (max-width: 900px) {
+    .home__info {
+      flex-direction: column; } }
   .home__info div {
-    width: 100%;
-  }
-}
-
-.home__info div a:hover {
-  border: 2px solid #34b1ac;
-}
-
-.home__info div h3 {
-  margin: 15px;
-  text-transform: uppercase;
-}
-
-.home__info div p {
-  margin-bottom: 15px;
-  width: 80%;
-}
-
-.home__info div button {
-  width: 150px;
-  height: 50px;
-}
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; }
+    @media all and (max-width: 900px) {
+      .home__info div {
+        width: 100%; } }
+    .home__info div img {
+      width: 212px;
+      padding: 15px;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer; }
+      .home__info div img:hover {
+        border: 2px solid #34b1ac; }
+    .home__info div .home__info__img--red:hover {
+      border: 2px solid #b13438; }
+    .home__info div h3 {
+      margin: 15px;
+      text-transform: uppercase; }
+    .home__info div p {
+      margin-bottom: 15px;
+      width: 80%; }
+    .home__info div button {
+      width: 150px;
+      height: 50px;
+      text-transform: uppercase; }
 
 .about-us__header__title {
   font-size: 2.25em;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .about-us .about-us__descriptions p {
   margin: 15px auto;
-  line-height: 1.5em;
-}
+  line-height: 1.5em; }
 
 .about-us .about-us__descriptions button {
   margin-top: 30px;
-  padding: 10px 20px;
-}
+  padding: 10px 20px; }
 
 .testimonials__list {
   margin: 30px;
   max-width: 1300px;
   display: flex;
-  justify-content: flex-start;
-}
-
-@media all and (max-width: 1000px) {
-  .testimonials__list {
-    margin: 30px auto;
-  }
-}
-
-@media all and (max-width: 1000px) {
-  .testimonials__list {
-    margin: 0 auto;
-    max-width: 700px;
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.testimonials__list div {
-  margin: 30px;
-  width: 50%;
-}
-
-@media all and (max-width: 1000px) {
+  justify-content: flex-start; }
+  @media all and (max-width: 1000px) {
+    .testimonials__list {
+      margin: 30px auto; } }
+  @media all and (max-width: 1000px) {
+    .testimonials__list {
+      margin: 0 auto;
+      max-width: 700px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center; } }
   .testimonials__list div {
-    max-width: 700px;
-    width: 100%;
-  }
-}
-
-.testimonials__list div p {
-  line-height: 1.4em;
-}
-
-.testimonials__list div p span {
-  font-style: italic;
-}
-
-.testimonials__list div hr {
-  display: none;
-}
-
-@media all and (max-width: 1000px) {
-  .testimonials__list div hr {
-    display: block;
-    width: 100%;
-    background: black;
-    color: black;
-  }
-}
-
-.testimonials__list div {
-  width: 320px;
-}
-
-@media all and (max-width: 1000px) {
+    margin: 30px;
+    width: 50%; }
+    @media all and (max-width: 1000px) {
+      .testimonials__list div {
+        max-width: 700px;
+        width: 100%; } }
+    .testimonials__list div p {
+      line-height: 1.4em; }
+      .testimonials__list div p span {
+        font-style: italic; }
+    .testimonials__list div hr {
+      display: none; }
+      @media all and (max-width: 1000px) {
+        .testimonials__list div hr {
+          display: block;
+          width: 100%;
+          background: black;
+          color: black; } }
   .testimonials__list div {
-    width: 90%;
-  }
-}
+    width: 320px; }
+    @media all and (max-width: 1000px) {
+      .testimonials__list div {
+        width: 90%; } }
 
 .solutions-and-services {
-  max-width: 1600px;
-}
-
-.solutions-and-services__list {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.solutions-and-services__list div {
-  margin: 30px;
-  width: 300px;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
-.solutions-and-services__list div img {
-  width: 200px;
-}
-
-.solutions-and-services__list div p {
-  margin-top: 5px;
-  text-align: center;
-}
-
-.solutions-and-services__list div a {
-  margin-top: 15px;
-  text-align: center;
-  padding: 10px 25px;
-}
+  max-width: 1600px; }
+  .solutions-and-services__list {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .solutions-and-services__list div {
+      margin: 30px;
+      width: 300px;
+      flex-direction: column;
+      align-items: center;
+      display: flex; }
+      .solutions-and-services__list div img {
+        width: 300px; }
+      .solutions-and-services__list div p {
+        margin-top: 5px;
+        text-align: center; }
+      .solutions-and-services__list div a {
+        margin-top: 15px;
+        text-align: center;
+        padding: 10px 25px; }
 
 .network-infrastructure__info ul li {
-  margin-left: 25px;
-}
+  margin-left: 25px; }
 
 .network-security__info ul li {
-  margin-left: 25px;
-}
+  margin-left: 25px; }
 
 .footer {
   position: absolute;
@@ -574,154 +571,110 @@ a {
   color: white;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-}
-
-@media all and (max-width: 850px) {
-  .footer {
-    height: 250px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.footer__info p,.footer__info address {
-  margin: 10px;
-}
-
-.footer__social-media {
-  display: flex;
-  align-items: center;
-}
-
-.footer__social-media i {
-  margin: 20px 20px 20px 0;
-  font-size: 40px;
-}
-
-@media all and (max-width: 350px) {
-  .footer__social-media i {
-    margin: 15px 15px 15px 0;
-  }
-}
-
-.footer__social-media__contact-us {
-  width: 180px;
-  height: 45px;
-}
+  align-items: center; }
+  @media all and (max-width: 850px) {
+    .footer {
+      height: 250px;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  .footer__info p, .footer__info address {
+    margin: 10px; }
+  .footer__social-media {
+    display: flex;
+    align-items: center; }
+    .footer__social-media i {
+      margin: 20px 20px 20px 0;
+      font-size: 40px; }
+      @media all and (max-width: 350px) {
+        .footer__social-media i {
+          margin: 15px 15px 15px 0; } }
+    .footer__social-media__contact-us {
+      width: 180px;
+      height: 45px; }
 
 /*********************************************************/
-
 .navbar {
   margin-top: 30px;
   min-height: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-@media all and (max-width: 850px) {
-  .navbar {
-    display: none;
-  }
-}
-
-.navbar__logo {
-  margin-left: 30px;
-  cursor: pointer;
-}
-
-.navbar__links {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar__links .dropdowns .dropdown {
-  margin: 0 20px;
-  width: 140px;
-}
-
-.navbar__links .dropdowns .dropdown:hover .dropdown__content {
-  display: block;
-}
-
-.navbar__links .dropdowns .dropdown:hover .dropdown__title {
-  border-bottom: 1px solid #34b1ac;
-}
-
-.navbar__links .dropdowns .dropdown__content {
-  display: none;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.navbar__links .dropdowns .dropdown__content p {
-  margin: 15px 0;
-  text-align: center;
-  cursor: pointer;
-}
-
-.navbar__links .dropdowns .dropdown__title p {
-  margin: 0;
-  text-align: center;
-  cursor: pointer;
-}
-
-.navbar__links .dropdowns .dropdown--extra-wide {
-  width: 250px;
-}
-
-.navbar__links__text {
-  width: 200px;
-  text-align: center;
-  cursor: pointer;
-}
+  justify-content: space-between; }
+  @media all and (max-width: 850px) {
+    .navbar {
+      display: none; } }
+  .navbar__logo {
+    margin-left: 30px;
+    cursor: pointer; }
+  .navbar__links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; }
+    .navbar__links .dropdowns .dropdown {
+      margin: 0 20px;
+      width: 140px; }
+      .navbar__links .dropdowns .dropdown:hover .dropdown__content {
+        display: block; }
+      .navbar__links .dropdowns .dropdown:hover .dropdown__title {
+        border-bottom: 1px solid #34b1ac; }
+      .navbar__links .dropdowns .dropdown__content {
+        display: none;
+        text-align: center; }
+        .navbar__links .dropdowns .dropdown__content p {
+          padding: 10px 0;
+          text-align: center;
+          cursor: pointer; }
+      .navbar__links .dropdowns .dropdown__title p {
+        margin: 0;
+        text-align: center;
+        cursor: pointer; }
+      .navbar__links .dropdowns .dropdown--extra-wide {
+        width: 250px; }
+    .navbar__links__text {
+      width: 200px;
+      text-align: center;
+      cursor: pointer; }
 
 /*********************************************************/
-
 .mobile-navbar {
-  display: none;
-}
+  display: none; }
 
 @media all and (max-width: 850px) {
   .mobile-navbar {
-    display: block;
-  }
-
-  .mobile-navbar .top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .mobile-navbar .top .mobile-navbar__logo {
-    margin-left: 30px;
-    cursor: pointer;
-  }
-
-  .mobile-navbar .top .mobile-navbar__fa-icon {
-    margin: 30px;
-  }
-
-  .mobile-navbar .top .mobile-navbar__fa-icon i {
-    font-size: 50px;
-    cursor: pointer;
-  }
-
-  .mobile-navbar .bottom {
-    opacity: 0;
-    height: 0;
-    transform: translateY(-70px);
-    transition: all .3s;
-  }
-
-  .mobile-navbar .bottom .mobile-navbar__links {
-    display: none;
-  }
-}
+    display: block; }
+    .mobile-navbar .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .mobile-navbar .top .mobile-navbar__logo {
+        margin-left: 30px;
+        cursor: pointer; }
+      .mobile-navbar .top .mobile-navbar__fa-icon {
+        margin: 30px; }
+        .mobile-navbar .top .mobile-navbar__fa-icon i {
+          font-size: 50px;
+          cursor: pointer; }
+    .mobile-navbar .bottom {
+      opacity: 0;
+      height: 0;
+      transform: translateY(-70px);
+      transition: all .3s; }
+      .mobile-navbar .bottom .mobile-navbar__links {
+        display: none; }
+    .mobile-navbar .active {
+      height: 150px;
+      opacity: 1;
+      transform: translateY(0); }
+      .mobile-navbar .active .mobile-navbar__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .mobile-navbar .active .mobile-navbar__links p {
+          margin: 5px;
+          font-size: 22px;
+          cursor: pointer; } }
 
 /*# sourceMappingURL=sourcemaps/index.css.map */

@@ -23,7 +23,6 @@ $media-query-two: 900px;
 		}
 
 		div {
-			margin: 10px;
 			text-align: center;
 			display: flex;
 			flex-direction: column;
@@ -35,15 +34,20 @@ $media-query-two: 900px;
 				width: 100%;
 			}
 
-
-			a {
+			img {
+				width: 212px;
+				padding: 15px;
+				border: 2px solid white;
+				border-radius: 5px;
+				cursor: pointer;
 
 				&:hover {
 					border: 2px solid $m5-blue;
 				}
-				img {
+			}
 
-				}
+			.home__info__img--red:hover {
+				border: 2px solid $m5-red;
 			}
 
 			h3 {
@@ -60,6 +64,7 @@ $media-query-two: 900px;
 				@extend .standard-btn;
 				width: 150px;
 				height: 50px;
+				text-transform: uppercase;
 			}
 		}
 	}

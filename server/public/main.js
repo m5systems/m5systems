@@ -22,6 +22,16 @@ app.run(function ($rootScope) {
 
 'use strict';
 
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('404', {
+		url: '/404',
+		templateUrl: 'js/404/404.template.min.html'
+	});
+});
+
+'use strict';
+
 app.controller('AboutCtrl', function ($scope) {});
 
 'use strict';
@@ -32,16 +42,6 @@ app.config(function ($stateProvider) {
 		url: '/about-us',
 		templateUrl: 'js/about-us/about-us.template.min.html',
 		controller: 'AboutCtrl'
-	});
-});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('404', {
-		url: '/404',
-		templateUrl: 'js/404/404.template.min.html'
 	});
 });
 
@@ -59,17 +59,6 @@ app.config(function ($stateProvider) {
 	});
 });
 
-app.directive('footer', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/footer/footer.template.min.html',
-
-		link: function (scope) {}
-	};
-});
-
 'use strict';
 
 app.controller('ContactUsCtrl', function ($scope) {});
@@ -83,6 +72,17 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/contact-us/contact-us.template.min.html',
 		controller: 'ContactUsCtrl'
 	});
+});
+
+app.directive('footer', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/footer/footer.template.min.html',
+
+		link: function (scope) {}
+	};
 });
 
 'use strict';

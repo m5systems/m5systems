@@ -37,15 +37,20 @@
     "node": "6.9.4"
   },
   "homepage": "https://github.com/sbernheim4/angular-stack#readme",
+  "keywords": [
+    "angular",
+    "angular-stack",
+    "express"
+  ],
   "license": "ISC",
   "main": "server/index.js",
+  "pre-commit": [
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sbernheim4/angular-stack.git"
   },
-  "pre-commit": [
-    "test"
-  ],
   "scripts": {
     "postinstall": "gulp buildProduction",
     "start": "nodemon server/index.js",

@@ -40,12 +40,15 @@
 				}
 
 				&__content {
+					position: absolute;
+					width: inherit;
 					display: none;
 					text-align: center;
 
 					p {
 						padding: 10px 0;
 						text-align: center;
+						color: rgb(174, 174, 175);
 						cursor: pointer;
 					}
 				}

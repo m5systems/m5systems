@@ -398,6 +398,9 @@ template {
 a {
   text-decoration: none; }
 
+img {
+  pointer-events: none; }
+
 /** NOTE: The properties below should ONLY be extended with SCSS **/
 .standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
   margin: 0 auto;
@@ -654,11 +657,14 @@ a {
       .navbar__links .dropdowns .dropdown:hover .dropdown__title {
         border-bottom: 1px solid #34b1ac; }
       .navbar__links .dropdowns .dropdown__content {
+        position: absolute;
+        width: inherit;
         display: none;
         text-align: center; }
         .navbar__links .dropdowns .dropdown__content p {
           padding: 10px 0;
           text-align: center;
+          color: #aeaeaf;
           cursor: pointer; }
       .navbar__links .dropdowns .dropdown__title p {
         margin: 0;

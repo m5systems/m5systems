@@ -490,10 +490,12 @@ img {
       height: 50px;
       text-transform: uppercase; }
 
-.about-us__header__title {
-  font-size: 2.25em;
-  font-weight: bold;
-  color: #58585b; }
+.about-us__header {
+  height: 100px; }
+  .about-us__header__title {
+    font-size: 2.25em;
+    font-weight: bold;
+    color: #58585b; }
 
 .about-us .about-us__descriptions p {
   margin: 15px auto;
@@ -571,8 +573,10 @@ img {
         text-align: center;
         padding: 10px 25px; }
 
-.cloud-consulting__header__title {
-  color: #58585b; }
+.cloud-consulting__header {
+  height: 100px; }
+  .cloud-consulting__header__title {
+    color: #58585b; }
 
 .network-and-datacenter-virtualization__header {
   background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }
@@ -666,6 +670,8 @@ img {
           text-align: center;
           color: #aeaeaf;
           cursor: pointer; }
+          .navbar__links .dropdowns .dropdown__content p:hover {
+            color: black; }
       .navbar__links .dropdowns .dropdown__title p {
         margin: 0;
         text-align: center;

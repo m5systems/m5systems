@@ -3,6 +3,7 @@
 
 	&__header{
 		@extend .standard__header;
+		height: 100px;
 
 		&__title {
 			@extend .standard__title;

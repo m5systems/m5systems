@@ -428,7 +428,7 @@ img {
   text-align: center;
   line-height: 1.3em; }
 
-.description, .about-us .about-us__descriptions, .cloud-consulting__info, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
+.description, .about-us .about-us__descriptions, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
   max-width: 800px;
   width: 85%;
@@ -577,6 +577,23 @@ img {
   height: 100px; }
   .cloud-consulting__header__title {
     color: #58585b; }
+
+.cloud-consulting__info {
+  display: flex;
+  flex-direction: row; }
+  .cloud-consulting__info__philosophy {
+    margin-right: 30px;
+    flex: 2; }
+    .cloud-consulting__info__philosophy h3 {
+      font-weight: bolder; }
+    .cloud-consulting__info__philosophy div {
+      margin-top: 15px; }
+      .cloud-consulting__info__philosophy div h4 {
+        margin-bottom: 10px;
+        font-weight: bold; }
+  .cloud-consulting__info__commitment {
+    margin-left: 30px;
+    flex: 3; }
 
 .network-and-datacenter-virtualization__header {
   background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }

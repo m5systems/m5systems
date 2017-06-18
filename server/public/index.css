@@ -589,6 +589,7 @@ a {
     .cloud-consulting__info__philosophy div {
       margin-top: 15px; }
       .cloud-consulting__info__philosophy div h4 {
+        font-style: italic;
         margin-bottom: 10px;
         font-weight: bold; }
   .cloud-consulting__info__commitment {

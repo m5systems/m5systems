@@ -35,7 +35,7 @@ $media-query-two: 900px;
 				width: 100%;
 			}
 
-			img {
+			.home__info__img {
 				width: 212px;
 				padding: 15px;
 				border: 2px solid white;
@@ -43,12 +43,8 @@ $media-query-two: 900px;
 				cursor: pointer;
 
 				&:hover {
-					border: 2px solid $m5-blue;
+					border: 2px solid $m5-red;
 				}
-			}
-
-			.home__info__img--red:hover {
-				border: 2px solid $m5-red;
 			}
 
 			h3 {

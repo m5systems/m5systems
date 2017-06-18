@@ -398,9 +398,9 @@ template {
 a {
   text-decoration: none; }
 
-img {
-  pointer-events: none; }
-
+/*img {
+	pointer-events: none;
+}*/
 /** NOTE: The properties below should ONLY be extended with SCSS **/
 .standard__section, .home, .about-us, .testimonials, .contact-us, .solutions-and-services, .cloud-consulting, .network-and-datacenter-virtualization, .tpm, .wireless-networks, .network-infrastructure, .network-security, .staff-augmentation, .error {
   margin: 0 auto;
@@ -469,16 +469,14 @@ img {
     @media all and (max-width: 900px) {
       .home__info div {
         width: 100%; } }
-    .home__info div img {
+    .home__info div .home__info__img {
       width: 212px;
       padding: 15px;
       border: 2px solid white;
       border-radius: 5px;
       cursor: pointer; }
-      .home__info div img:hover {
-        border: 2px solid #34b1ac; }
-    .home__info div .home__info__img--red:hover {
-      border: 2px solid #b13438; }
+      .home__info div .home__info__img:hover {
+        border: 2px solid #b13438; }
     .home__info div h3 {
       margin: 15px;
       text-transform: uppercase; }
@@ -505,8 +503,10 @@ img {
   margin-top: 30px;
   padding: 10px 20px; }
 
-.testimonials__header__title {
-  color: #58585b; }
+.testimonials__header {
+  height: 200px; }
+  .testimonials__header__title {
+    color: #58585b; }
 
 .testimonials__list {
   margin: 30px;
@@ -594,6 +594,8 @@ img {
   .cloud-consulting__info__commitment {
     margin-left: 30px;
     flex: 3; }
+    .cloud-consulting__info__commitment h3 {
+      font-weight: bolder; }
 
 .network-and-datacenter-virtualization__header {
   background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }
@@ -684,8 +686,9 @@ img {
         text-align: center; }
         .navbar__links .dropdowns .dropdown__content p {
           padding: 10px 0;
+          background: #adadad;
           text-align: center;
-          color: #aeaeaf;
+          color: white;
           cursor: pointer; }
           .navbar__links .dropdowns .dropdown__content p:hover {
             color: black; }

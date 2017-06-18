@@ -47,20 +47,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('CloudConsultingCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('cloud-consulting', {
-		url: '/cloud-consulting',
-		templateUrl: 'js/cloud-consulting/cloud-consulting.template.min.html',
-		controller: 'CloudConsultingCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('ContactUsCtrl', function ($scope) {});
 
 'use strict';
@@ -71,6 +57,20 @@ app.config(function ($stateProvider) {
 		url: '/contact-us',
 		templateUrl: 'js/contact-us/contact-us.template.min.html',
 		controller: 'ContactUsCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('CloudConsultingCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('cloud-consulting', {
+		url: '/cloud-consulting',
+		templateUrl: 'js/cloud-consulting/cloud-consulting.template.min.html',
+		controller: 'CloudConsultingCtrl'
 	});
 });
 
@@ -147,15 +147,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkSecurityCtrl', function ($scope) {});
+app.controller('NetworkInfrastructureCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('network-security', {
-		url: '/solutions-and-services/network-security',
-		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
-		controller: 'NetworkSecurityCtrl'
+	$stateProvider.state('network-infrastructure', {
+		url: '/solutions-and-services/network-infrastructure',
+		templateUrl: 'js/solutions-and-services/network-infrastructure/network-infrastructure.template.min.html',
+		controller: 'NetworkInfrastructureCtrl'
 	});
 });
 
@@ -175,15 +175,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkInfrastructureCtrl', function ($scope) {});
+app.controller('NetworkSecurityCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('network-infrastructure', {
-		url: '/solutions-and-services/network-infrastructure',
-		templateUrl: 'js/solutions-and-services/network-infrastructure/network-infrastructure.template.min.html',
-		controller: 'NetworkInfrastructureCtrl'
+	$stateProvider.state('network-security', {
+		url: '/solutions-and-services/network-security',
+		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
+		controller: 'NetworkSecurityCtrl'
 	});
 });
 

@@ -11,7 +11,51 @@
 		}
 	}
 
-	&__info{
-		@extend .description;
+	&__info {
+		display: flex;
+		flex-direction: row;
+
+		&__philosophy {
+			margin-right: 30px;
+			flex: 2;
+
+			h3 {
+				font-weight: bolder;
+			}
+
+			div {
+				margin-top: 15px;
+
+				h4 {
+					font-style: italic;
+					margin-bottom: 10px;
+					font-weight: bold;
+				}
+
+				p {
+
+				}
+			}
+		}
+
+		&__commitment {
+			margin-left: 30px;
+			flex: 3;
+
+			h3 {
+				font-weight: bolder;
+			}
+
+			p {
+
+			}
+
+			ul {
+
+				li {
+
+				}
+			}
+		}
 	}
 }

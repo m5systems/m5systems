@@ -701,12 +701,6 @@ a {
           cursor: pointer; }
         .navbar__links .dropdowns .dropdown--extra-wide {
           width: 250px; }
-    .navbar__links__text {
-      width: 140px;
-      text-align: center;
-      cursor: pointer; }
-      .navbar__links__text:hover {
-        border-bottom: 3px solid #34b1ac; }
 
 /*********************************************************/
 .mobile-navbar {

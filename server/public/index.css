@@ -609,7 +609,7 @@ a {
   justify-content: center;
   flex-wrap: wrap; }
   .cloud-consulting__graphic i {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 90px; }
   .cloud-consulting__graphic__item {
     width: 140px;
@@ -625,6 +625,11 @@ a {
       display: flex;
       justify-content: center;
       align-items: center; }
+      .cloud-consulting__graphic__item .circle p {
+        margin: 0;
+        color: white; }
+    .cloud-consulting__graphic__item p {
+      margin-top: 10px; }
 
 .network-and-datacenter-virtualization__header {
   background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }

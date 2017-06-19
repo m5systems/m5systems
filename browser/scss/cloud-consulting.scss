@@ -72,7 +72,7 @@
 		flex-wrap: wrap;
 
 		i {
-			margin-top: 10px;
+			margin-top: 5px;
 			font-size: 90px;
 		}
 
@@ -93,12 +93,13 @@
 				align-items: center;
 
 				p {
-
+					margin: 0;
+					color: white;
 				}
 			}
 
 			p {
-
+				margin-top: 10px;
 			}
 		}
 	}

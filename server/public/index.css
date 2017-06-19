@@ -579,6 +579,7 @@ a {
     color: #58585b; }
 
 .cloud-consulting__info {
+  margin-bottom: 60px;
   display: flex;
   flex-direction: row; }
   .cloud-consulting__info__philosophy {
@@ -597,6 +598,33 @@ a {
     flex: 3; }
     .cloud-consulting__info__commitment h3 {
       font-weight: bolder; }
+
+.cloud-consulting h2 {
+  text-align: center; }
+
+.cloud-consulting__graphic {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .cloud-consulting__graphic i {
+    margin-top: 10px;
+    font-size: 90px; }
+  .cloud-consulting__graphic__item {
+    width: 140px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cloud-consulting__graphic__item .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #34b1ac;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
 
 .network-and-datacenter-virtualization__header {
   background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }

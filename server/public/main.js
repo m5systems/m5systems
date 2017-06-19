@@ -59,17 +59,6 @@ app.config(function ($stateProvider) {
 	});
 });
 
-app.directive('footer', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/footer/footer.template.min.html',
-
-		link: function (scope) {}
-	};
-});
-
 'use strict';
 
 app.controller('ContactUsCtrl', function ($scope) {});
@@ -83,6 +72,17 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/contact-us/contact-us.template.min.html',
 		controller: 'ContactUsCtrl'
 	});
+});
+
+app.directive('footer', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/footer/footer.template.min.html',
+
+		link: function (scope) {}
+	};
 });
 
 'use strict';

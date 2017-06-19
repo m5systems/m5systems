@@ -3,8 +3,6 @@
 $m5-blue: rgb(52, 177, 172);
 $m5-red: rgb(177, 52, 56);
 
-$navbar-height: 150px;
-$navbar-height-unexpanded: 110px;
 $navbar-media-query: 850px;
 
 $footer-height: 160px;
@@ -29,9 +27,11 @@ a {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 90%;
-	min-height: calc(100vh - #{$footer-height} - 60px - #{$navbar-height});
+	// the min height should be 100vh - the space the footer and its margin - the height of the navbar and its margin --> Navbar height + its margin is 111px on desktop
+	// Desktop and mobile navbar (unexpanded) both have a height of 111px
+	min-height: calc(100vh - #{$footer-height} - 60px - 111px);
 	@media all and (max-width: $footer-media-query) {
-		min-height: calc(100vh - #{$footer-height-two} - 60px - #{$navbar-height-unexpanded})
+		min-height: calc(100vh - #{$footer-height-two} - 60px - 111px)
 	}
 }
 

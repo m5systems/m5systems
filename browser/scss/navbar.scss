@@ -84,6 +84,7 @@
 
 @media all and (max-width: $navbar-media-query) {
 	.mobile-navbar {
+		margin: 31px 30px 0 30px;
 		display: block;
 
 		.top {
@@ -93,12 +94,10 @@
 			align-items: center;
 
 			.mobile-navbar__logo {
-				margin-left: 30px;
 				cursor: pointer;
 			}
 
 			.mobile-navbar__fa-icon {
-				margin: 30px;
 				i {
 					font-size: 50px;
 					cursor: pointer;

@@ -659,7 +659,6 @@ a {
 /*********************************************************/
 .navbar {
   margin-top: 30px;
-  min-height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -673,36 +672,41 @@ a {
     margin-top: 30px;
     display: flex;
     justify-content: center; }
-    .navbar__links .dropdowns .dropdown {
-      margin: 0 20px;
-      width: 140px; }
-      .navbar__links .dropdowns .dropdown:hover .dropdown__content {
-        display: block; }
-      .navbar__links .dropdowns .dropdown:hover .dropdown__title {
-        border-bottom: 1px solid #34b1ac; }
-      .navbar__links .dropdowns .dropdown__content {
-        position: absolute;
-        width: inherit;
-        display: none;
-        text-align: center; }
-        .navbar__links .dropdowns .dropdown__content p {
-          padding: 10px 0;
-          background: #adadad;
+    .navbar__links .dropdowns {
+      margin: 0 30px; }
+      .navbar__links .dropdowns .dropdown {
+        width: 140px; }
+        .navbar__links .dropdowns .dropdown:hover .dropdown__content {
+          display: block; }
+        .navbar__links .dropdowns .dropdown:hover .dropdown__title {
+          border-bottom: 3px solid #34b1ac; }
+        .navbar__links .dropdowns .dropdown__content {
+          position: absolute;
+          width: inherit;
+          display: none;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 2px 15px black;
+          text-align: center; }
+          .navbar__links .dropdowns .dropdown__content p {
+            padding: 10px 0;
+            text-align: center;
+            color: gray;
+            cursor: pointer; }
+            .navbar__links .dropdowns .dropdown__content p:hover {
+              color: black; }
+        .navbar__links .dropdowns .dropdown__title p {
+          margin: 0;
           text-align: center;
-          color: white;
           cursor: pointer; }
-          .navbar__links .dropdowns .dropdown__content p:hover {
-            color: black; }
-      .navbar__links .dropdowns .dropdown__title p {
-        margin: 0;
-        text-align: center;
-        cursor: pointer; }
-      .navbar__links .dropdowns .dropdown--extra-wide {
-        width: 250px; }
+        .navbar__links .dropdowns .dropdown--extra-wide {
+          width: 250px; }
     .navbar__links__text {
-      width: 200px;
+      width: 140px;
       text-align: center;
       cursor: pointer; }
+      .navbar__links__text:hover {
+        border-bottom: 3px solid #34b1ac; }
 
 /*********************************************************/
 .mobile-navbar {

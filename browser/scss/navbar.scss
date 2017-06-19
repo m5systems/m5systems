@@ -3,7 +3,6 @@
 
 .navbar {
 	margin-top: 30px;
-	min-height: $navbar-height;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -23,9 +22,9 @@
 		justify-content: center;
 
 		.dropdowns {
+			margin: 0 30px;
 
 			.dropdown {
-				margin: 0 20px;
 				width: 140px;
 
 				&:hover {
@@ -34,7 +33,7 @@
 					}
 
 					.dropdown__title {
-						border-bottom: 1px solid $m5-blue;
+						border-bottom: 3px solid $m5-blue;
 					}
 				}
 
@@ -42,13 +41,15 @@
 					position: absolute;
 					width: inherit;
 					display: none;
+					background-color: white;
+					border-radius: 5px;
+					box-shadow: 0 2px 15px black;
 					text-align: center;
 
 					p {
 						padding: 10px 0;
-						background: #adadad;
 						text-align: center;
-						color: white;
+						color: gray;
 						cursor: pointer;
 
 						&:hover {
@@ -73,9 +74,13 @@
 		}
 
 		&__text {
-			width: 200px;
+			width: 140px;
 			text-align: center;
 			cursor: pointer;
+
+			&:hover {
+				border-bottom: 3px solid $m5-blue;
+			}
 		}
 	}
 }

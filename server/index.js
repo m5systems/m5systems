@@ -27,9 +27,6 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.post('/api/formSubmit', (req, res, next) => {
-	console.log("Request from api received");
-	console.log(req.body);
-
 
 	// Send email with sendgrid api --> Example
 	const helper = require('sendgrid').mail;
@@ -39,11 +36,12 @@ app.post('/api/formSubmit', (req, res, next) => {
 
 	const message = `<html><body><p>${req.body.name} would like to get in touch. They can be reached at ${req.body.email}. They had the following message:</p>
 
-	${req.body.message}
+	<p>${req.body.message}</p>
 
 	<p><a href='${req.body.website}'>Click here to view their website</a></p></body></html>`;
 
 	const content = new helper.Content('text/html', message);
+
 	const mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
 	const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);

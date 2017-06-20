@@ -62,6 +62,8 @@ app.config(function ($stateProvider) {
 'use strict';
 
 app.controller('ContactUsCtrl', function ($scope, $http) {
+	$scope.submitted = false;
+
 	$scope.getInfo = function (user) {
 		const name = user.name;
 		const email = user.email;
@@ -77,6 +79,8 @@ app.controller('ContactUsCtrl', function ($scope, $http) {
 				"website": website,
 				"message": message
 			}
+		}).then(function () {
+			$scope.submitted = true;
 		});
 	};
 });

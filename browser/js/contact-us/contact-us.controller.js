@@ -18,9 +18,9 @@ app.controller('ContactUsCtrl', function($scope, $http) {
 				"website": website,
 				"message": message
 			}
-		}).then(function() {
-			$scope.submitted = true;
 		});
+
+		$scope.submitted = true;
 	};
 
 });

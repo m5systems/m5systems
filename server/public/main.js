@@ -32,6 +32,20 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.controller('CloudConsultingCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('cloud-consulting', {
+		url: '/cloud-consulting',
+		templateUrl: 'js/cloud-consulting/cloud-consulting.template.min.html',
+		controller: 'CloudConsultingCtrl'
+	});
+});
+
+'use strict';
+
 app.controller('AboutCtrl', function ($scope) {});
 
 'use strict';
@@ -42,20 +56,6 @@ app.config(function ($stateProvider) {
 		url: '/about-us',
 		templateUrl: 'js/about-us/about-us.template.min.html',
 		controller: 'AboutCtrl'
-	});
-});
-
-'use strict';
-
-app.controller('CloudConsultingCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('cloud-consulting', {
-		url: '/cloud-consulting',
-		templateUrl: 'js/cloud-consulting/cloud-consulting.template.min.html',
-		controller: 'CloudConsultingCtrl'
 	});
 });
 
@@ -79,9 +79,9 @@ app.controller('ContactUsCtrl', function ($scope, $http) {
 				"website": website,
 				"message": message
 			}
-		}).then(function () {
-			$scope.submitted = true;
 		});
+
+		$scope.submitted = true;
 	};
 });
 
@@ -169,15 +169,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
+app.controller('NetworkSecurityCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
+	$stateProvider.state('network-security', {
+		url: '/solutions-and-services/network-security',
+		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
+		controller: 'NetworkSecurityCtrl'
 	});
 });
 
@@ -197,15 +197,15 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkSecurityCtrl', function ($scope) {});
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';
 
 app.config(function ($stateProvider) {
-	$stateProvider.state('network-security', {
-		url: '/solutions-and-services/network-security',
-		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
-		controller: 'NetworkSecurityCtrl'
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
 	});
 });
 

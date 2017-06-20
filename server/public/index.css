@@ -548,6 +548,35 @@ a {
       .testimonials__list div {
         width: 90%; } }
 
+.contact-us__header {
+  height: 200px; }
+  .contact-us__header__title {
+    color: #58585b; }
+
+.contact-us__form {
+  margin: 0 auto;
+  width: 500px; }
+  .contact-us__form form {
+    display: flex;
+    flex-direction: column; }
+    .contact-us__form form input, .contact-us__form form textarea {
+      margin: 5px 0 15px 0;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-sizing: border-box; }
+    .contact-us__form form label span {
+      color: red; }
+  .contact-us__form__submit {
+    width: 120px;
+    background-color: #cb4d51;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color .3s ease; }
+    .contact-us__form__submit:hover {
+      background-color: #8a282c; }
+
 .solutions-and-services {
   max-width: 1600px; }
   .solutions-and-services--header--title {
@@ -726,7 +755,7 @@ a {
             color: gray;
             cursor: pointer; }
             .navbar__links .dropdowns .dropdown__content p:hover {
-              color: black; }
+              color: #b13438; }
         .navbar__links .dropdowns .dropdown__title p {
           margin: 0;
           text-align: center;

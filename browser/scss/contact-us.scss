@@ -3,20 +3,53 @@
 
 	&__header {
 		@extend .standard__header;
+		height: 200px;
 
 		&__title {
 			@extend .standard__title;
+			color: rgb(88,88,91);
 		}
 	}
 
 	&__form {
+		margin: 0 auto;
+		width: 500px;
 
 		p {
 
 		}
 
 		form {
+			display: flex;
+			flex-direction: column;
 
+			input, textarea {
+				margin: 5px 0 15px 0;
+				padding: 10px;
+				border: 1px solid black;
+				border-radius: 5px;
+				box-sizing: border-box;
+			}
+
+			label {
+
+				span {
+					color: red;
+				}
+			}
+		}
+
+		&__submit {
+			width: 120px;
+			background-color: lighten($m5-red, 10%);
+			border: none;
+			color: white;
+			cursor: pointer;
+			transition: background-color .3s ease;
+
+			&:hover {
+				background-color: darken($m5-red, 10%);
+			}
 		}
 	}
 }

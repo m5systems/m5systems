@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const compression = require('compression');
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.use(compression());
 
@@ -20,7 +21,44 @@ app.use(express.static(path.join(__dirname, 'public'), {maxAge: cacheTime}));
  * html template files must be served statically so that they can be accessed
  * by the browser on a GET request
  */
- app.use(express.static(path.join(__dirname, '../browser/')));
+app.use(express.static(path.join(__dirname, '../browser/')));
+
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+app.post('/api/formSubmit', (req, res, next) => {
+	console.log("Request from api received");
+	console.log(req.body);
+
+
+	// Send email with sendgrid api --> Example
+	const helper = require('sendgrid').mail;
+	const fromEmail = new helper.Email('m5systems@m5systems.org');
+	const subject = 'New form submission from website';
+	const toEmail = new helper.Email('sambernheim@gmail.com');
+
+	const message = `<html><body><p>${req.body.name} would like to get in touch. They can be reached at ${req.body.email}. They had the following message:</p>
+
+	${req.body.message}
+
+	<p><a href='${req.body.website}'>Click here to view their website</a></p></body></html>`;
+
+	const content = new helper.Content('text/html', message);
+	const mail = new helper.Mail(fromEmail, subject, toEmail, content);
+
+	const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+	const request = sg.emptyRequest({
+		method: 'POST',
+		path: '/v3/mail/send',
+		body: mail.toJSON()
+	});
+
+	sg.API(request, function (error, response) {
+		if (error) {
+			console.log('Error response received');
+		}
+	});
+});
 
 // For any get request return the index.html file
 app.get('/*', function (req, res) {

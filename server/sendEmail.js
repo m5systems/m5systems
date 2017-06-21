@@ -8,11 +8,15 @@ function send(mail) {
 		body: mail.toJSON()
 	});
 
-	return sg.API(request, (err, res) => {
-		if (err) {
-			console.log("error response received: ", err);
-		}
-	});
+	if (process.env.NODE_ENV === 'production') {
+		return sg.API(request, (err, res) => {
+			if (err) {
+				console.log("error response received: ", err);
+			}
+		});
+	} else {
+		console.log("sendEmail was called but environment was not production");
+	}
 }
 
 module.exports = {

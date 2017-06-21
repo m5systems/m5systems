@@ -11,6 +11,8 @@ app.use(compression());
 
 const port = process.env.PORT || 1337;
 const cacheTime = 1209600000; // 2 weeks
+const env = require('./env');
+app.set('env', env);
 
 // folder to serve public files --> css, img, etc
 // Folders inside public and the files inside them are also available --> Works recursively
@@ -58,5 +60,6 @@ app.get('/*', function (req, res) {
 
 // Listen on the port for incoming requests
 app.listen(port, function() {
-	console.log('Listening to port:', port);
+	console.log(chalk.white('Listening to port:', port));
+	console.log(chalk.blue('Environment is:', process.env.NODE_ENV));
 });

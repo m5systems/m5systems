@@ -55,7 +55,8 @@
   },
   "scripts": {
     "postinstall": "gulp buildProduction",
-    "start": "nodemon server/index.js",
+    "start": "export NODE_ENV=production; nodemon server/index.js",
+    "dev": "export NODE_ENV=development; nodemon server/index.js",
     "test": "gulp lint"
   }
 }

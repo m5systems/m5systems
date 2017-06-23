@@ -6,13 +6,13 @@ const compression = require('compression');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
-app.use(compression());
+const env = require('./env');
 
 const port = process.env.PORT || 1337;
 const cacheTime = 1209600000; // 2 weeks
-const env = require('./env');
+
 app.set('env', env);
+app.use(compression());
 
 // folder to serve public files --> css, img, etc
 // Folders inside public and the files inside them are also available --> Works recursively
@@ -28,21 +28,8 @@ app.use(express.static(path.join(__dirname, '../browser/')));
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.post('/api/formSubmit', (req, res, next) => {
-	let info = {};
-	info.from = 'm5systems@m5systems.org';
-	info.subject = 'New form submission from website';
-	info.to = 'sambernheim@gmail.com';
-	info.content = `<html><body><p>${req.body.name} would like to get in touch. They can be reached at ${req.body.email}. They had the following message:</p>
-
-		<p>${req.body.message}</p>
-
-		<p><a href='${req.body.website}'>Click here to view their website</a></p></body></html>`;
-
-	const emailFunc = require('./sendEmail.js');
-
-	return emailFunc.sendEmail(info);
-});
+// Any request to /api denotes an internal call for a post request of a form submission or something like that
+app.use('/api', require('./routes'));
 
 // For any get request return the index.html file
 app.get('/*', function (req, res) {

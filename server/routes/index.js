@@ -13,7 +13,7 @@ router.post('/formSubmit', (req, res, next) => {
 
 		<p><a href='${req.body.website}'>Click here to view their website</a></p></body></html>`;
 
-	const emailFunc = require('./sendEmail.js');
+	const emailFunc = require('../modules/sendEmail.js');
 
 	return emailFunc.sendEmail(info);
 });

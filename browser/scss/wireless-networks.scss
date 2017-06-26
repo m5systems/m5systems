@@ -3,7 +3,10 @@
 
 	&__header{
 		@extend .standard__header;
-		background-image: url("images/wireless-networks-header.jpg");
+		background-image: linear-gradient(
+			rgba(59, 186, 181, 0.15),
+			rgba(59, 186, 181, 0.15)),
+			url("images/wireless-networks-header.jpg");
 
 		&__title {
 			@extend .standard__title;

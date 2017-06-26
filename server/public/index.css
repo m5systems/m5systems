@@ -412,9 +412,10 @@ a {
       min-height: calc(100vh - 250px - 60px - 111px); } }
 
 .standard__header, .home__header, .about-us__header, .testimonials__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
-  margin-bottom: 30px;
+  margin: 30px 0;
   height: 400px;
   background-size: cover;
+  background-position: center;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -426,7 +427,8 @@ a {
   text-transform: uppercase;
   color: white;
   text-align: center;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  text-shadow: 0px 0px 10px black; }
 
 .description, .about-us .about-us__descriptions, .network-and-datacenter-virtualization__info, .tpm__info, .wireless-networks__info, .network-infrastructure__info, .network-security__info, .staff-augmentation__info {
   margin: 30px auto;
@@ -448,7 +450,8 @@ a {
     background-color: #b13438; }
 
 .home__header__title {
-  color: #58585b; }
+  color: #58585b;
+  text-shadow: none; }
 
 .home__info {
   margin: 30px auto;
@@ -493,7 +496,8 @@ a {
   .about-us__header__title {
     font-size: 2.25em;
     font-weight: bold;
-    color: #58585b; }
+    color: #58585b;
+    text-shadow: none; }
 
 .about-us .about-us__descriptions p {
   margin: 15px auto;
@@ -506,7 +510,8 @@ a {
 .testimonials__header {
   height: 200px; }
   .testimonials__header__title {
-    color: #58585b; }
+    color: #58585b;
+    text-shadow: none; }
 
 .testimonials__list {
   margin: 30px;
@@ -580,7 +585,8 @@ a {
 .solutions-and-services {
   max-width: 1600px; }
   .solutions-and-services--header--title {
-    color: #58585b; }
+    color: #58585b;
+    text-shadow: none; }
   .solutions-and-services__list {
     margin: 0 auto;
     display: flex;
@@ -603,9 +609,9 @@ a {
         padding: 10px 25px; }
 
 .cloud-consulting__header {
-  height: 100px; }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/cloud-consulting-header.jpg"); }
   .cloud-consulting__header__title {
-    color: #58585b; }
+    color: white; }
 
 .cloud-consulting__info {
   margin-bottom: 60px;
@@ -667,16 +673,16 @@ a {
       margin-top: 10px; }
 
 .network-and-datacenter-virtualization__header {
-  background-image: url("images/network-and-datacenter-virtualization-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/network-and-datacenter-virtualization-header.jpg"); }
 
 .tpm__header {
-  background-image: url("images/tpm-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/tpm-header.jpg"); }
 
 .wireless-networks__header {
-  background-image: url("images/wireless-networks-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/wireless-networks-header.jpg"); }
 
 .network-infrastructure__header {
-  background-image: url("images/network-infrastructure-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/network-infrastructure-header.jpg"); }
   .network-infrastructure__header__title {
     color: white; }
 
@@ -684,13 +690,13 @@ a {
   margin-left: 25px; }
 
 .network-security__header {
-  background-image: url("images/network-security-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/network-security-header.jpg"); }
 
 .network-security__info ul li {
   margin-left: 25px; }
 
 .staff-augmentation__header {
-  background-image: url("images/staff-augmentation-header.jpg"); }
+  background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/staff-augmentation-header.jpg"); }
 
 .footer {
   position: absolute;

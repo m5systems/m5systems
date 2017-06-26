@@ -3,7 +3,10 @@
 
 	&__header {
 		@extend .standard__header;
-		background-image: url("images/tpm-header.jpg");
+		background-image: linear-gradient(
+			rgba(59, 186, 181, 0.15),
+			rgba(59, 186, 181, 0.15)),
+			url("images/tpm-header.jpg");
 
 		&__title {
 			@extend .standard__title;

@@ -3,11 +3,14 @@
 
 	&__header {
 		@extend .standard__header;
-		height: 100px;
+		background-image: linear-gradient(
+			rgba(59, 186, 181, 0.15),
+			rgba(59, 186, 181, 0.15)),
+			url("images/cloud-consulting-header.jpg");
 
 		&__title {
 			@extend .standard__title;
-			color: rgb(88,88,91);
+			color: white;
 		}
 	}
 

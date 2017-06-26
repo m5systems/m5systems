@@ -37,9 +37,10 @@ a {
 
 // Top part of every page that contains the page title
 .standard__header {
-	margin-bottom: 30px;
+	margin: 30px 0;
 	height: 400px;
 	background-size: cover;
+	background-position: center;
 	font-size: 20px;
 	display: flex;
 	justify-content: center;
@@ -54,6 +55,7 @@ a {
 	color: white;
 	text-align: center;
 	line-height: 1.3em;
+	text-shadow: 0px 0px 10px black;
 }
 
 .description {

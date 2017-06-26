@@ -10,13 +10,16 @@
 
 		<form>
 			<label for='name'> Name <span>(reqiured)</span></label>
-			<input id='name' ng-model ='user.name' type='text' placeholder='Please enter your name'>
+			<input id='name' ng-model ='user.name' ng-required='true'  type='text' placeholder='Please enter your name'>
+
 			<label for='email'>Email <span>(reqiured)</span></label>
-			<input id='email' ng-model='user.email'  type='text' placeholder='Please enter your email'>
+			<input id='email' ng-model='user.email' ng-required='true' type='text' placeholder='Please enter your email'>
+
 			<label for='website'>Website</label>
 			<input id='website' ng-model='user.website' type='text' placeholder='What is your website url'>
+
 			<label for='message'>Message Content <span>(reqiured)</span></label>
-			<textarea id='message' ng-model='user.message' cols='50' rows='5'  placeholder='Please enter your question or comment below'></textarea>
+			<textarea id='message' ng-model='user.message' ng-required='true' cols='50' rows='5'  placeholder='Please enter your question or comment below'></textarea>
 
 			<input ng-click='getInfo(user)' class='contact-us__form__submit' type='submit'>
 		</form>

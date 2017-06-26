@@ -3,14 +3,18 @@ $media-query-two: 900px;
 
 .home {
 	@extend .standard__section;
+	margin-top: 30px;
+	max-width: 100vw;
+	width: 100vw;
 
 	&__header {
 		@extend .standard__header;
+		margin: 0;
+		height: calc(100vh - 142px);
+		background-image: url('images/wireless-networks-header.jpg');
 
 		&__title {
 			@extend .standard__title;
-			color: rgb(88,88,91);
-			text-shadow: none;
 		}
 	}
 

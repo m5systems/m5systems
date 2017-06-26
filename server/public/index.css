@@ -412,7 +412,6 @@ a {
       min-height: calc(100vh - 250px - 60px - 111px); } }
 
 .standard__header, .home__header, .about-us__header, .testimonials__header, .contact-us__header, .solutions-and-services--header, .cloud-consulting__header, .network-and-datacenter-virtualization__header, .tpm__header, .wireless-networks__header, .network-infrastructure__header, .network-security__header, .staff-augmentation__header {
-  margin: 30px 0;
   height: 400px;
   background-size: cover;
   background-position: center;
@@ -449,47 +448,51 @@ a {
   .standard-btn:hover, .home__info div button:hover, .about-us .about-us__descriptions button:hover, .solutions-and-services__list div a:hover, .footer__social-media__contact-us:hover {
     background-color: #b13438; }
 
-.home__header__title {
-  color: #58585b;
-  text-shadow: none; }
-
-.home__info {
-  margin: 30px auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  @media all and (max-width: 900px) {
-    .home__info {
-      flex-direction: column; } }
-  .home__info div {
-    text-align: center;
+.home {
+  margin-top: 30px;
+  max-width: 100vw;
+  width: 100vw; }
+  .home__header {
+    margin: 0;
+    height: calc(100vh - 142px);
+    background-image: url("images/wireless-networks-header.jpg"); }
+  .home__info {
+    margin: 30px auto;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex: 1; }
+    align-items: center; }
     @media all and (max-width: 900px) {
-      .home__info div {
-        width: 100%; } }
-    .home__info div .home__info__img {
-      width: 212px;
-      padding: 15px;
-      border: 2px solid white;
-      border-radius: 5px;
-      cursor: pointer; }
-      .home__info div .home__info__img:hover {
-        border: 2px solid #b13438; }
-    .home__info div h3 {
-      margin: 15px;
-      text-transform: uppercase; }
-    .home__info div p {
-      margin-bottom: 15px;
-      width: 80%; }
-    .home__info div button {
-      width: 150px;
-      height: 50px;
-      text-transform: uppercase; }
+      .home__info {
+        flex-direction: column; } }
+    .home__info div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1; }
+      @media all and (max-width: 900px) {
+        .home__info div {
+          width: 100%; } }
+      .home__info div .home__info__img {
+        width: 212px;
+        padding: 15px;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer; }
+        .home__info div .home__info__img:hover {
+          border: 2px solid #b13438; }
+      .home__info div h3 {
+        margin: 15px;
+        text-transform: uppercase; }
+      .home__info div p {
+        margin-bottom: 15px;
+        width: 80%; }
+      .home__info div button {
+        width: 150px;
+        height: 50px;
+        text-transform: uppercase; }
 
 .about-us__header {
   height: 100px; }
@@ -732,7 +735,7 @@ a {
 
 /*********************************************************/
 .navbar {
-  margin-top: 30px;
+  margin: 30px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }

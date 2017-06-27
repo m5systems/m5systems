@@ -10,7 +10,7 @@ $media-query-two: 900px;
 	&__header {
 		@extend .standard__header;
 		margin: 0;
-		height: calc(100vh - 142px);
+		height: calc(100vh - 141px);
 		background-image: url('images/wireless-networks-header-hi-res.jpg');
 
 		&__title {

@@ -454,7 +454,7 @@ a {
   width: 100vw; }
   .home__header {
     margin: 0;
-    height: calc(100vh - 142px);
+    height: calc(100vh - 141px);
     background-image: url("images/wireless-networks-header-hi-res.jpg"); }
   .home__info {
     margin: 30px auto;
@@ -559,7 +559,8 @@ a {
 .contact-us__header {
   height: 200px; }
   .contact-us__header__title {
-    color: #58585b; }
+    color: #58585b;
+    text-shadow: none; }
 
 .contact-us__form {
   margin: 0 auto;

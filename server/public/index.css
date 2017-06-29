@@ -613,6 +613,7 @@ a {
         padding: 10px 25px; }
 
 .cloud-consulting__header {
+  margin-bottom: 30px;
   background-image: linear-gradient(rgba(59, 186, 181, 0.15), rgba(59, 186, 181, 0.15)), url("images/cloud-consulting-header.jpg"); }
   .cloud-consulting__header__title {
     color: white; }
@@ -632,9 +633,11 @@ a {
     .cloud-consulting__info__philosophy div {
       margin-top: 15px; }
       .cloud-consulting__info__philosophy div h4 {
-        font-style: italic;
         margin-bottom: 10px;
-        font-weight: bold; }
+        font-style: italic;
+        font-weight: bold;
+        font-size: 25px;
+        color: #b13438; }
   .cloud-consulting__info__commitment {
     margin-left: 30px;
     flex: 3; }
@@ -642,8 +645,9 @@ a {
       .cloud-consulting__info__commitment {
         margin-top: 30px;
         margin-left: 0; } }
-    .cloud-consulting__info__commitment h3 {
-      font-weight: bolder; }
+    .cloud-consulting__info__commitment h2 {
+      font-weight: bolder;
+      color: #34b1ac; }
     .cloud-consulting__info__commitment ul li {
       margin-left: 20px; }
 

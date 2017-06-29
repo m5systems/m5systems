@@ -3,6 +3,8 @@
 
 	&__header {
 		@extend .standard__header;
+		margin-bottom: 30px;
+
 		background-image: linear-gradient(
 			rgba(59, 186, 181, 0.15),
 			rgba(59, 186, 181, 0.15)),
@@ -35,9 +37,11 @@
 				margin-top: 15px;
 
 				h4 {
-					font-style: italic;
 					margin-bottom: 10px;
+					font-style: italic;
 					font-weight: bold;
+					font-size: 25px;
+					color: $m5-red;
 				}
 
 				p {
@@ -55,8 +59,9 @@
 				margin-left: 0;
 			}
 
-			h3 {
+			h2 {
 				font-weight: bolder;
+				color: $m5-blue;
 			}
 
 			p {

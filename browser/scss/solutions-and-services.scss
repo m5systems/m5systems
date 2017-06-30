@@ -4,6 +4,7 @@
 
 	&--header {
 		@extend .standard__header;
+		height: 200px;
 
 		&--title {
 			@extend .standard__title;

@@ -30,8 +30,8 @@
 			margin-right: 30px;
 			flex: 2;
 
-			h3 {
-				font-weight: bolder;
+			h2 {
+				font-size: 30px;
 			}
 
 			div {
@@ -61,12 +61,17 @@
 			}
 
 			h2 {
-				font-weight: bolder;
-				color: $m5-blue;
+				font-size: 30px;
 			}
 
 			p {
 
+			}
+
+			h4 {
+				font-size: 26px;
+				font-style: italic;
+				color: $m5-blue;
 			}
 
 			ul {
@@ -76,9 +81,6 @@
 				}
 			}
 		}
-	}
-
-	h2 {
 	}
 
 	&__graphic {

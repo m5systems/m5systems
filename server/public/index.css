@@ -589,9 +589,11 @@ a {
 
 .solutions-and-services {
   max-width: 1600px; }
-  .solutions-and-services--header--title {
-    color: #58585b;
-    text-shadow: none; }
+  .solutions-and-services--header {
+    height: 200px; }
+    .solutions-and-services--header--title {
+      color: #58585b;
+      text-shadow: none; }
   .solutions-and-services__list {
     margin: 0 auto;
     display: flex;
@@ -630,8 +632,8 @@ a {
   .cloud-consulting__info__philosophy {
     margin-right: 30px;
     flex: 2; }
-    .cloud-consulting__info__philosophy h3 {
-      font-weight: bolder; }
+    .cloud-consulting__info__philosophy h2 {
+      font-size: 30px; }
     .cloud-consulting__info__philosophy div {
       margin-top: 15px; }
       .cloud-consulting__info__philosophy div h4 {
@@ -648,7 +650,10 @@ a {
         margin-top: 30px;
         margin-left: 0; } }
     .cloud-consulting__info__commitment h2 {
-      font-weight: bolder;
+      font-size: 30px; }
+    .cloud-consulting__info__commitment h4 {
+      font-size: 26px;
+      font-style: italic;
       color: #34b1ac; }
     .cloud-consulting__info__commitment ul li {
       margin-left: 20px; }

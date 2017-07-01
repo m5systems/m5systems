@@ -665,15 +665,23 @@ a {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap; }
+  @media all and (max-width: 767px) {
+    .cloud-consulting__graphic {
+      flex-direction: column;
+      align-items: center; } }
   .cloud-consulting__graphic i {
     margin-top: 10px;
     font-size: 100px; }
+    @media all and (max-width: 767px) {
+      .cloud-consulting__graphic i {
+        transform: rotate(90deg); } }
   .cloud-consulting__graphic__item {
-    width: 140px;
+    width: 230px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    }
     .cloud-consulting__graphic__item .circle {
       width: 120px;
       height: 120px;

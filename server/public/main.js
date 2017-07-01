@@ -169,20 +169,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-and-datacenter-virtualization', {
-		url: '/solutions-and-services/network-and-datacenter-virtualization',
-		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
-		controller: 'NetworkAndDatacenterVirtualizationCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('NetworkInfrastructureCtrl', function ($scope) {});
 
 'use strict';
@@ -192,6 +178,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/network-infrastructure',
 		templateUrl: 'js/solutions-and-services/network-infrastructure/network-infrastructure.template.min.html',
 		controller: 'NetworkInfrastructureCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('network-and-datacenter-virtualization', {
+		url: '/solutions-and-services/network-and-datacenter-virtualization',
+		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
+		controller: 'NetworkAndDatacenterVirtualizationCtrl'
 	});
 });
 
@@ -225,20 +225,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('TPMCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('tpm', {
-		url: '/solutions-and-services/technical-project-management',
-		templateUrl: 'js/solutions-and-services/tpm/tpm.template.min.html',
-		controller: 'TPMCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('WirelessNetworksCtrl', function ($scope) {});
 
 'use strict';
@@ -248,6 +234,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/wireless-networks',
 		templateUrl: 'js/solutions-and-services/wireless-networks/wireless-networks.template.min.html',
 		controller: 'WirelessNetworksCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('TPMCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('tpm', {
+		url: '/solutions-and-services/technical-project-management',
+		templateUrl: 'js/solutions-and-services/tpm/tpm.template.min.html',
+		controller: 'TPMCtrl'
 	});
 });
 //# sourceMappingURL=sourcemaps/main.js.map

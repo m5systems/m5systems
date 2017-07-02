@@ -676,12 +676,14 @@ a {
       .cloud-consulting__graphic i {
         transform: rotate(90deg); } }
   .cloud-consulting__graphic__item {
-    width: 230px;
+    width: 140px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    }
+    align-items: center; }
+    @media all and (max-width: 767px) {
+      .cloud-consulting__graphic__item {
+        width: 230px; } }
     .cloud-consulting__graphic__item .circle {
       width: 120px;
       height: 120px;

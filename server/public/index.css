@@ -421,6 +421,7 @@ a {
   align-items: center; }
 
 .standard__title, .home__header__title, .about-us__header__title, .testimonials__header__title, .contact-us__header__title, .solutions-and-services--header--title, .cloud-consulting__header__title, .network-and-datacenter-virtualization__header__title, .tpm__header__title, .wireless-networks__header__title, .network-infrastructure__header__title, .network-security__header__title, .staff-augmentation__header__title {
+  padding: 15px;
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -664,15 +665,25 @@ a {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap; }
+  @media all and (max-width: 767px) {
+    .cloud-consulting__graphic {
+      flex-direction: column;
+      align-items: center; } }
   .cloud-consulting__graphic i {
     margin-top: 10px;
     font-size: 100px; }
+    @media all and (max-width: 767px) {
+      .cloud-consulting__graphic i {
+        transform: rotate(90deg); } }
   .cloud-consulting__graphic__item {
     width: 140px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media all and (max-width: 767px) {
+      .cloud-consulting__graphic__item {
+        width: 230px; } }
     .cloud-consulting__graphic__item .circle {
       width: 120px;
       height: 120px;
@@ -809,6 +820,8 @@ a {
       align-items: center; }
       .mobile-navbar .top .mobile-navbar__logo {
         cursor: pointer; }
+        .mobile-navbar .top .mobile-navbar__logo img {
+          margin-bottom: 10px; }
       .mobile-navbar .top .mobile-navbar__fa-icon i {
         font-size: 50px;
         cursor: pointer; }

@@ -1,3 +1,6 @@
+$cloud-consulting-graphic-mobile: 767px;
+
+
 .cloud-consulting {
 	@extend .standard__section;
 
@@ -90,9 +93,18 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
+		@media all and (max-width: $cloud-consulting-graphic-mobile) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		i {
 			margin-top: 10px;
 			font-size: 100px;
+
+			@media all and (max-width: $cloud-consulting-graphic-mobile) {
+				transform: rotate(90deg);
+			}
 		}
 
 		&__item {
@@ -101,6 +113,10 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
+			@media all and(max-width: $cloud-consulting-graphic-mobile) {
+				width: 230px;
+			}
 
 			.circle {
 				width: 120px;

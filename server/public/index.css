@@ -687,6 +687,7 @@ a {
     .cloud-consulting__graphic__item .circle {
       width: 120px;
       height: 120px;
+      background-size: cover;
       background-color: #34b1ac;
       border-radius: 100%;
       display: flex;
@@ -694,7 +695,18 @@ a {
       align-items: center; }
       .cloud-consulting__graphic__item .circle p {
         margin: 0;
-        color: white; }
+        color: white;
+        text-shadow: 0px 0px 10px black; }
+      .cloud-consulting__graphic__item .circle--review {
+        background-image: url("images/cloud-consulting-process/review.jpg"); }
+      .cloud-consulting__graphic__item .circle--advise {
+        background-image: url("images/cloud-consulting-process/advise.jpg"); }
+      .cloud-consulting__graphic__item .circle--analyze {
+        background-image: url("images/cloud-consulting-process/analyze.jpg"); }
+      .cloud-consulting__graphic__item .circle--estimate {
+        background-image: url("images/cloud-consulting-process/estimate.jpg"); }
+      .cloud-consulting__graphic__item .circle--support {
+        background-image: url("images/cloud-consulting-process/support.jpg"); }
     .cloud-consulting__graphic__item p {
       margin-top: 10px; }
 

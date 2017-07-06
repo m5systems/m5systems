@@ -2,7 +2,7 @@
 
 // Register the angular app
 
-const app = angular.module('M5Systems', ['ui.router']);
+var app = angular.module('M5Systems', ['ui.router']);
 
 app.config(function ($locationProvider, $urlRouterProvider) {
 	// allow for real urls and not hashbang urls --> EX: /timer instead of /#timer
@@ -65,10 +65,10 @@ app.controller('ContactUsCtrl', function ($scope, $http) {
 	$scope.submitted = false;
 
 	$scope.getInfo = function (user) {
-		const name = user.name;
-		const email = user.email;
-		const website = user.website;
-		const message = user.message;
+		var name = user.name;
+		var email = user.email;
+		var website = user.website;
+		var message = user.message;
 
 		$http({
 			method: 'POST',
@@ -103,7 +103,7 @@ app.directive('footer', function ($rootScope, $state) {
 		scope: {},
 		templateUrl: 'js/footer/footer.template.min.html',
 
-		link: function (scope) {}
+		link: function link(scope) {}
 	};
 });
 
@@ -129,7 +129,7 @@ app.directive('navbar', function ($rootScope, $state) {
 		scope: {},
 		templateUrl: 'js/navbar/navbar.template.min.html',
 
-		link: function (scope) {
+		link: function link(scope) {
 
 			scope.displayLinks = function () {
 				document.querySelector('.bottom').classList.toggle('active');

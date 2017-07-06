@@ -26,7 +26,7 @@ const livereload = require('gulp-livereload');
 gulp.task('buildCSSProduction', () => {
 	return gulp.src('./browser/scss/index.scss')
 		.pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
-	//.pipe(purify(['./browser/js/**/*.min.html']))
+		.pipe(purify(['./browser/js/**/*.min.html']))
 		.pipe(postcss([autoprefixer({browsers: ['> 1%']})]))
 		.pipe(cleanCSS()) // minify the css file
 		.pipe(gulp.dest('./server/public/')) // write the css file to ./server
@@ -114,7 +114,7 @@ gulp.task('buildCSS', () => {
 	return gulp.src('./browser/scss/index.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError)) // compile the sass file to a css file
-	// .pipe(cleanCSS()) // minify the css file
+		.pipe(cleanCSS()) // minify the css file
 		.pipe(sourcemaps.write('./sourcemaps/'))
 		.pipe(gulp.dest('./server/public/')) // write the css file to ./server
 		.pipe(livereload()); // reload browser automatically

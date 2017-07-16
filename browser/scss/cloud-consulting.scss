@@ -128,11 +128,6 @@ $cloud-consulting-graphic-mobile: 767px;
 				justify-content: center;
 				align-items: center;
 
-				p {
-					margin: 0;
-					color: white;
-					text-shadow: 0px 0px 10px black;
-				}
 
 				&--review {
 					background-image: url("images/cloud-consulting-process/review.jpg");
@@ -159,7 +154,17 @@ $cloud-consulting-graphic-mobile: 767px;
 
 			p {
 				margin-top: 10px;
+
+				span {
+					font-weight: bolder;
+					font-size: 23px;
+				}
 			}
 		}
+	}
+
+	&__apn-logo {
+		display: block;
+		margin: 0 auto;
 	}
 }

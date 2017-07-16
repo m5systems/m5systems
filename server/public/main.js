@@ -112,7 +112,7 @@ app.directive('footer', function ($rootScope, $state) {
 app.controller('HomeCtrl', function ($scope) {
 
 	$scope.chooseImage = function () {
-		var randomNum = Math.floor(Math.random() * 6);
+		var randomNum = Math.floor(Math.random() * 7);
 		var arrayOfImageUrls = ['background-1.jpg', 'background-2.jpg', 'background-3.jpg', 'background-4.jpg', 'background-5.jpg', 'background-6.jpg', 'background-7.jpg'];
 		var background = document.querySelector('.home__header');
 

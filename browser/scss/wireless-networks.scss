@@ -4,8 +4,8 @@
 	&__header{
 		@extend .standard__header;
 		background-image: linear-gradient(
-			rgba(59, 186, 181, 0.15),
-			rgba(59, 186, 181, 0.15)),
+			rgba(59, 186, 181, 0),
+			rgba(59, 186, 181, 0)),
 			url("images/wireless-networks-header.jpg");
 
 		&__title {

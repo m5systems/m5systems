@@ -13,7 +13,6 @@ const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const gulpStylelint = require('gulp-stylelint');
-const html5Lint = require('gulp-html5-lint');
 const chalk = require('chalk');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
@@ -99,16 +98,10 @@ gulp.task('lintCSS', () => {
 		}));
 });
 
-gulp.task('lintHTML', () => {
-	return gulp.src('./browser/js/**/*.html')
-		.pipe(html5Lint());
-})
-
 gulp.task('lint', () => {
 	printLint();
 	gulp.start('lintJS');
 	gulp.start('lintCSS');
-	gulp.start('lintHTML');
 })
 /**********************************************************/
 /* Development Builds */

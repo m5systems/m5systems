@@ -47,7 +47,18 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('CloudConsultingCtrl', function ($scope) {});
+app.controller('CloudConsultingCtrl', function ($scope) {
+
+	$scope.chooseImage = function () {
+		var randomNum = Math.floor(Math.random() * 7);
+		var arrayOfImageUrls = ['background-1.jpg', 'background-2.jpg', 'background-3.jpg', 'background-4.jpg', 'background-5.jpg', 'background-6.jpg', 'background-7.jpg'];
+		var background = document.querySelector('.cloud-consulting__header');
+
+		background.style.backgroundImage = 'url(images/cloud-consulting-background/' + arrayOfImageUrls[randomNum] + ')';
+	};
+
+	$scope.chooseImage();
+});
 
 'use strict';
 
@@ -109,18 +120,7 @@ app.directive('footer', function ($rootScope, $state) {
 
 'use strict';
 
-app.controller('HomeCtrl', function ($scope) {
-
-	$scope.chooseImage = function () {
-		var randomNum = Math.floor(Math.random() * 7);
-		var arrayOfImageUrls = ['background-1.jpg', 'background-2.jpg', 'background-3.jpg', 'background-4.jpg', 'background-5.jpg', 'background-6.jpg', 'background-7.jpg'];
-		var background = document.querySelector('.home__header');
-
-		background.style.backgroundImage = 'url(images/home-background-photos/' + arrayOfImageUrls[randomNum] + ')';
-	};
-
-	$scope.chooseImage();
-});
+app.controller('HomeCtrl', function ($scope) {});
 
 'use strict';
 

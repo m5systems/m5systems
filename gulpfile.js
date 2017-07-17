@@ -14,11 +14,8 @@ const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const gulpStylelint = require('gulp-stylelint');
 const chalk = require('chalk');
-
-/* NOTE: This requires a chrome extention to work properly:
- * https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
- */
-const livereload = require('gulp-livereload');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
 
 /**********************************************************/
 /* Production Builds */
@@ -117,7 +114,7 @@ gulp.task('buildCSS', () => {
 		.pipe(cleanCSS()) // minify the css file
 		.pipe(sourcemaps.write('./sourcemaps/'))
 		.pipe(gulp.dest('./server/public/')) // write the css file to ./server
-		.pipe(livereload()); // reload browser automatically
+		.pipe(browserSync.stream()); // reload browser automatically
 });
 
 gulp.task('buildJS', () => {
@@ -127,7 +124,7 @@ gulp.task('buildJS', () => {
 		.pipe(babel()) // run babel to use ES6 syntax
 		.pipe(sourcemaps.write('./sourcemaps/'))
 		.pipe(gulp.dest('./server/public')) // write the result of this to ./server/public
-		.pipe(livereload()); // reload browser automatically
+		.pipe(browserSync.stream()); // reload browser automatically
 });
 
 gulp.task('buildHTML', () => {
@@ -142,12 +139,19 @@ gulp.task('buildHTML', () => {
 			path.extname = '.min.html' // change file extention from .html to .min.html
 		}))
 		.pipe(gulp.dest('./browser/js'))
-		.pipe(livereload()); // reload browser automatically
+		.pipe(browserSync.stream()); // reload browser automatically
 })
+
+gulp.task('browser-sync', () => {
+	browserSync.init({
+		proxy: `localhost:1337`,  // local node app address --> Confgirued in ./server/index.js
+		port: 5000  // use *different* port than above --> Use this port for the actual url in the browser
+		/*notify: true*/
+	});
+});
 
 /* Watch files to have gulp tasks run automatically when saved */
 gulp.task('watch', () => {
-	livereload.listen(); // reload browser automatically on save
 	gulp.watch('./browser/scss/*', ['buildCSS', 'lintCSS']);
 	gulp.watch('./browser/js/**/*.js', ['buildJS', 'lintJS'])
 	gulp.watch('./browser/js/**/*.html', ['buildHTML']);
@@ -159,4 +163,4 @@ gulp.task('watch', () => {
  * Run buildCSS and buildJS so the app is built/updated without requiring a save
  * in one of the watched files to run the same tasks
  */
-gulp.task('default', ['buildHTML', 'buildCSS', 'buildJS', 'watch', 'lint']);
+gulp.task('default', ['browser-sync', 'buildHTML', 'buildCSS', 'buildJS', 'watch', 'lint']);

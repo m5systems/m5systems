@@ -36,6 +36,7 @@
     "stylelint-order": "^0.4.4"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "pre-commit": "^1.2.2"
   },
   "engines": {

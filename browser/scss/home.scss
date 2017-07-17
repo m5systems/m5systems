@@ -10,6 +10,7 @@ $media-query-two: 900px;
 		@extend .standard__header;
 		margin: 0;
 		height: calc(100vh - 118px);
+		background-image: url('images/home-background.jpg');
 
 		&__title {
 			@extend .standard__title;

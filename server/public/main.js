@@ -54,7 +54,7 @@ app.controller('CloudConsultingCtrl', function ($scope) {
 		var arrayOfImageUrls = ['background-1.jpg', 'background-2.jpg', 'background-3.jpg', 'background-4.jpg', 'background-5.jpg', 'background-6.jpg', 'background-7.jpg'];
 		var background = document.querySelector('.cloud-consulting__header');
 
-		background.style.backgroundImage = 'url(images/cloud-consulting-background/' + arrayOfImageUrls[randomNum] + ')';
+		background.style.backgroundImage = 'url(images/random-background-images/' + arrayOfImageUrls[randomNum] + ')';
 	};
 
 	$scope.chooseImage();
@@ -120,7 +120,18 @@ app.directive('footer', function ($rootScope, $state) {
 
 'use strict';
 
-app.controller('HomeCtrl', function ($scope) {});
+app.controller('HomeCtrl', function ($scope) {
+
+	$scope.chooseImage = function () {
+		var randomNum = Math.floor(Math.random() * 7);
+		var arrayOfImageUrls = ['background-1.jpg', 'background-2.jpg', 'background-3.jpg', 'background-4.jpg', 'background-5.jpg', 'background-6.jpg', 'background-7.jpg'];
+		var background = document.querySelector('.home__header');
+
+		background.style.backgroundImage = 'url(images/random-background-images/' + arrayOfImageUrls[randomNum] + ')';
+	};
+
+	$scope.chooseImage();
+});
 
 'use strict';
 
@@ -180,20 +191,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkInfrastructureCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-infrastructure', {
-		url: '/solutions-and-services/network-infrastructure',
-		templateUrl: 'js/solutions-and-services/network-infrastructure/network-infrastructure.template.min.html',
-		controller: 'NetworkInfrastructureCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';
@@ -203,6 +200,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/network-and-datacenter-virtualization',
 		templateUrl: 'js/solutions-and-services/network-and-datacenter-virtualization/network-and-datacenter-virtualization.template.min.html',
 		controller: 'NetworkAndDatacenterVirtualizationCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('NetworkInfrastructureCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('network-infrastructure', {
+		url: '/solutions-and-services/network-infrastructure',
+		templateUrl: 'js/solutions-and-services/network-infrastructure/network-infrastructure.template.min.html',
+		controller: 'NetworkInfrastructureCtrl'
 	});
 });
 

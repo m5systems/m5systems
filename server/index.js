@@ -18,8 +18,8 @@ app.use(compression());
 // Folders inside public and the files inside them are also available --> Works recursively
 app.use(express.static(path.join(__dirname, 'public'), {maxAge: cacheTime}));
 app.get('/manifest.json', (req, res) => {
-	res.sendFile(path.join('../manifest.json'));
-})
+	res.sendFile(path.join(__dirname, '../manifest.json'));
+});
 
 /*
  * Serve all the files in ../browser/ staticlly as well --> Needed since the

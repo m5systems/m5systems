@@ -160,10 +160,7 @@ $cloud-consulting-graphic-mobile: 767px;
 	}
 
 	&__apn-logo {
-		margin: 0 auto;
-		width: 150px;
-		display: block;
+		@extend .apn-logo;
 		padding-top: 20px;
-		border-radius: 3px;
 	}
 }

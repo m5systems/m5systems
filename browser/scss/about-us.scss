@@ -30,9 +30,6 @@
 	}
 
 	.about-us__apn-logo {
-		margin: 0 auto;
-		width: 150px;
-		display: block;
-		border-radius: 3px;
+		@extend .apn-logo;
 	}
 }

@@ -17,9 +17,15 @@ app.use(compression());
 // folder to serve public files --> css, img, etc
 // Folders inside public and the files inside them are also available --> Works recursively
 app.use(express.static(path.join(__dirname, 'public'), {maxAge: cacheTime}));
+
 app.get('/manifest.json', (req, res) => {
 	res.set('Content-Type', 'text/json');
 	res.sendFile(path.resolve('manifest.json'));
+});
+
+app.get('/manifests.json', (req, res) => {
+	res.set('Content-Type', 'text/json');
+	res.sendFile(path.resolve('../manifest.json'));
 });
 
 /*

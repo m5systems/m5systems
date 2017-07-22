@@ -19,7 +19,7 @@ app.use(compression());
 app.use(express.static(path.join(__dirname, 'public'), {maxAge: cacheTime}));
 app.get('/manifest.json', (req, res) => {
 	res.set('Content-Type', 'text/json');
-	res.sendFile(path.join(__dirname, '../manifest.json'));
+	res.sendFile(path.resolve('manifest.json'));
 });
 
 /*

@@ -107,17 +107,6 @@ app.config(function ($stateProvider) {
 	});
 });
 
-app.directive('footer', function ($rootScope, $state) {
-
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'js/footer/footer.template.min.html',
-
-		link: function link(scope) {}
-	};
-});
-
 'use strict';
 
 app.controller('HomeCtrl', function ($scope) {
@@ -142,6 +131,17 @@ app.config(function ($stateProvider) {
 		templateUrl: 'js/home/home.template.min.html',
 		controller: 'HomeCtrl'
 	});
+});
+
+app.directive('footer', function ($rootScope, $state) {
+
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'js/footer/footer.template.min.html',
+
+		link: function link(scope) {}
+	};
 });
 
 app.directive('navbar', function ($rootScope, $state) {

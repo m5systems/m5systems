@@ -9,7 +9,9 @@
 		"$scope": true,
 		"scope": true,
 		"$state": true,
-		"document": true;
+		"document": true,
+		"require": true,
+		"console": "true"
 	},
 
 	"rules": {

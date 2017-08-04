@@ -1,36 +1,43 @@
-const helper = require('sendgrid').mail;
-const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+const path = require('path');
+const aws = require('aws-sdk'); // load aws sdk
+aws.config.loadFromPath(path.resolve('../../config.json')); // load aws config
+const ses = new aws.SES({apiVersion: '2010-12-01'}); // load AWS SES
 
 function send(mail) {
-	const request = sg.emptyRequest({
-		method: 'POST',
-		path: '/v3/mail/send',
-		body: mail.toJSON()
-	});
 
-	if (process.env.NODE_ENV === 'production') {
-		return sg.API(request, (err, res) => {
-			if (err) {
-				console.log("error response received: ", err);
+	let to = []; // send to list
+	mail.to.forEach(email => {
+		to.push(email);
+	})
+
+	const from = mail.from; // this must relate to a verified SES account
+
+	// this sends the email
+	// @todo - add HTML version
+	ses.sendEmail( {
+		Source: from,
+		Destination: { ToAddresses: to },
+		Message: {
+			Subject:Source {
+				Data: mail.subject;
+			},
+			Body: {
+				Text: {
+					Data: mail.content,
+				}
 			}
-		});
-	} else {
-		console.log("sendEmail was called but environment was not production");
-	}
+		}
+	},
+	function(err, data) {
+		if(err) throw err;
+		console.log('Email sent:');
+		console.log(data);
+	});
 }
 
 module.exports = {
 	sendEmail: (info) => {
-		// Get all the information stored in the proper format
-		const fromEmail = new helper.Email(info.from);
-		const subject = info.subject;
-		const toEmail = new helper.Email(info.to);
-		const content = new helper.Content('text/html', info.content);
-
-		// create a new `mail` object used by sendgrid
-		const mail = new helper.Mail(fromEmail, subject, toEmail, content);
-
 		// call internal send function
-		return send(mail);
+		return send(info);
 	}
 };

@@ -11,17 +11,17 @@ function sendWithNodemailer(info) {
 	}));
 
 	const options = {
-		from: 'info@m5systems.com',
-		to: 'sambernheim@gmail.com',
+		from: info.from,
+		to: info.to,
 		subject: info.subject,
-		text: info.content
+		html: info.content
 	};
 
 	transporter.sendMail(options, (err, info) => {
 		if (err) {
 			console.log(err);
 		} else {
-			console.log(`Message Sent: ${info.response}`);
+			console.log(`Message Sent`);
 		}
 	});
 }

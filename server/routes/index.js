@@ -4,7 +4,7 @@ module.exports = router;
 
 router.post('/formSubmit', (req, res, next) => {
 	let info = {};
-	info.from = 'm5systems@m5systems.org';
+	info.from = 'info@m5systems.org';
 	info.subject = 'New form submission from website';
 	info.to = 'agreenwald@m5systems.com';
 	info.content = `<html><body><p>${req.body.name} would like to get in touch. They can be reached at ${req.body.email}. They had the following message:</p>

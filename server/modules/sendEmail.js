@@ -9,9 +9,7 @@ const ses = new aws.SES({apiVersion: '2010-12-01'}); // load AWS SES
 function send(mail) {
 
 	let to = []; // send to list
-	mail.to.forEach(email => {
-		to.push(email);
-	});
+	to.push(mail.to);
 
 	const params = {
 		Destination: {

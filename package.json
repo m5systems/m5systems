@@ -31,6 +31,8 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-stylelint": "^3.9.0",
     "gulp-uglify": "^2.0.1",
+    "nodemailer": "^4.0.1",
+    "nodemailer-ses-transport": "^1.5.1",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "sendgrid": "^5.1.1",

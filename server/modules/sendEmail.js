@@ -1,47 +1,34 @@
 const path = require('path');
-const aws = require('aws-sdk'); // load aws sdk
+const nodemailer = require('nodemailer');
+const ses = require('nodemailer-ses-transport');
+const config = require('./config.json');
 
-const config = path.join(__dirname, 'config.json');
 
-aws.config.loadFromPath(config); // load aws config
-const ses = new aws.SES({apiVersion: '2010-12-01'}); // load AWS SES
+function sendWithNodemailer(info) {
+	const transporter = nodemailer.createTransport(ses({
+		accessKeyId: config.accessKeyId,
+		secretAccessKey: config.secretAccessKey
+	}));
 
-function send(mail) {
-
-	let to = []; // send to list
-	to.push(mail.to);
-
-	const params = {
-		Destination: {
-			ToAddresses: to
-		},
-		Message: {
-			Body: {
-				Text: {
-					Charset: "UTF-8",
-					Data: mail.content
-				}
-			},
-			Subject: {
-				Charset: "UTF-8",
-				Data: mail.subject
-			}
-		},
-		Source: mail.from // this must relate to a verified SES account
+	const options = {
+		from: 'info@m5systems.com',
+		to: 'sambernheim@gmail.com',
+		subject: info.subject,
+		text: info.content
 	};
 
-
-	ses.sendEmail(params, function(err, data) {
-		if(err) throw err;
-		console.log('Email sent:');
-		console.log(data);
+	transporter.sendMail(options, (err, info) => {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(`Message Sent: ${info.response}`);
+		}
 	});
 }
 
 module.exports = {
 	sendEmail: (info) => {
-
 		// call internal send function
-		return send(info);
+		return sendWithNodemailer(info);
 	}
 };

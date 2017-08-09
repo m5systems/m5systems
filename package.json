@@ -64,7 +64,7 @@
   "scripts": {
     "dev": "export NODE_ENV=development; nodemon server/index.js",
     "postinstall": "gulp buildProduction",
-    "start": "export NODE_ENV=production; forever start -c nodemon server/index.js",
+    "start": "export NODE_ENV=production; export PORT=8080; forever start -c nodemon server/index.js",
     "test": "gulp lint"
   }
 }

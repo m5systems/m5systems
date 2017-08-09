@@ -40,3 +40,16 @@ Below is the file structure for this stack. Each state goes in its own folder, a
 |------gulpfile.js
 |------package.json
 ```
+
+# Running The App on AWS
+
+Run the following commands in the ec2 instance
+
+`export PORT=8080`
+`sudo iptables --insert INPUT --protocol tcp --dport 80 --jump ACCEPT`
+`sudo iptables --insert INPUT --protocol tcp --dport 8080 --jump ACCEPT`
+`sudo iptables --table nat --append PREROUTING --in-interface eth0 --protocol tcp --dport 80 --jump REDIRECT --to-port 8080`
+`# run next line to have changes survive reboot`
+`sudo service iptables save`
+`# cd into the angular-stack folder`
+`npm start`

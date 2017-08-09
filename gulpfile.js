@@ -144,7 +144,7 @@ gulp.task('buildHTML', () => {
 
 gulp.task('browser-sync', () => {
 	browserSync.init({
-		proxy: `localhost:1337`,  // local node app address --> Confgirued in ./server/index.js
+		proxy: `localhost:8080`,  // local node app address --> Confgirued in ./server/index.js
 		port: 5000,  // use *different* port than above --> Use this port for the actual url in the browser
 		logFileChanges: false, // Don't display which files were reloaded in terminal
 		notify: false // Don't show the browsersync popup in chrome

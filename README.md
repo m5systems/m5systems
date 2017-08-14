@@ -43,13 +43,32 @@ Below is the file structure for this stack. Each state goes in its own folder, a
 
 # Running The App on AWS
 
-Run the following commands in the ec2 instance
+Run the following commands in the ec2 instance (This set of commands only needs to be run in a new instance or if the instance was stopped and is restarted)
 
 `export PORT=8080`
+
 `sudo iptables --insert INPUT --protocol tcp --dport 80 --jump ACCEPT`
+
 `sudo iptables --insert INPUT --protocol tcp --dport 8080 --jump ACCEPT`
+
 `sudo iptables --table nat --append PREROUTING --in-interface eth0 --protocol tcp --dport 80 --jump REDIRECT --to-port 8080`
-`# run next line to have changes survive reboot`
+
 `sudo service iptables save`
-`# cd into the angular-stack folder`
+
+## Stopping the node Server
+
+To stop the node server first cd into the `angular-stack` directory. Run `forever list` to get the PID (Process ID) of the node server. Then run `forever stop <PID>` replacing `<PID>` with the PID you got from running `forever list`. The PID will appear in a column.
+
+If there are multiple processes that are output (more than one row) run `forever stop <PID>` for each PID that appears to ensure all instances are stopped. Run `forever list` again to verify that all processes have been terminated.
+
+## Starting the node Server
+
+To start the Node server, first cd to the root of the angular-stack folder, then run
+
 `npm start`
+
+This will start the node server in the background.
+
+# Making changes to the Codebase
+
+If you make changes to the code base either by pushing commits to github or directly in the container, once you are done making your changes run `gulp buildProduction` from the root of the angular-stack directory. The changes will then appear. This command copies and bundles files together to reduce file sizes to make them faster to download. Do NOT edit any files ending in .min.html. The above command will automatically generate these files.

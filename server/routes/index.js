@@ -1,6 +1,5 @@
 'use strict';
 const router = require('express').Router();
-module.exports = router;
 
 router.post('/formSubmit', (req, res, next) => {
 	let info = {};
@@ -17,3 +16,5 @@ router.post('/formSubmit', (req, res, next) => {
 
 	return emailFunc.sendEmail(info);
 });
+
+module.exports = router;

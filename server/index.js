@@ -6,12 +6,10 @@ const compression = require('compression');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const env = require('./env');
 
 const port = process.env.PORT || 1337;
 const cacheTime = 1209600000; // 2 weeks
 
-app.set('env', env);
 app.use(compression());
 
 // folder to serve public files --> css, img, etc

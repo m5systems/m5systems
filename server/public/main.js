@@ -162,20 +162,6 @@ app.directive('navbar', function ($rootScope, $state) {
 
 'use strict';
 
-app.controller('TestimonialsCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('testimonials', {
-		url: '/testimonials',
-		templateUrl: 'js/testimonials/testimonials.template.min.html',
-		controller: 'TestimonialsCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('SolutionsAndServicesCtrl', function ($scope) {});
 
 'use strict';
@@ -186,6 +172,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services',
 		templateUrl: 'js/solutions-and-services/solutions-and-services.template.min.html',
 		controller: 'SolutionsAndServicesCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('TestimonialsCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('testimonials', {
+		url: '/testimonials',
+		templateUrl: 'js/testimonials/testimonials.template.min.html',
+		controller: 'TestimonialsCtrl'
 	});
 });
 

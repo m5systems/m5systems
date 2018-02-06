@@ -191,6 +191,19 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
+app.config(function ($stateProvider) {
+	$stateProvider.state('pdffile', {
+		url: '/pdf',
+		templateUrl: 'js/cloud-consulting/pdf/pdf.template.min.html'
+	});
+});
+
+'use strict';
+
+app.controller('PDFCtrl', function ($scope) {});
+
+'use strict';
+
 app.controller('NetworkAndDatacenterVirtualizationCtrl', function ($scope) {});
 
 'use strict';

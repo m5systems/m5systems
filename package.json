@@ -65,7 +65,7 @@
     "dev": "export NODE_ENV=development; export PORT=8080; nodemon server/index.js",
     "postinstall": "gulp buildProduction",
     "real-start": "export NODE_ENV=production; export PORT=8080; forever start -c nodemon server/index.js",
-    "start": "export NODE_ENV=production; forever start -c nodemon server/index.js",
+    "start": "export NODE_ENV=production; node server/index.js",
     "test": "gulp lint"
   }
 }

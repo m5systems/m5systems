@@ -22,16 +22,6 @@ app.run(function ($rootScope) {
 
 'use strict';
 
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('404', {
-		url: '/404',
-		templateUrl: 'js/404/404.template.min.html'
-	});
-});
-
-'use strict';
-
 app.controller('AboutCtrl', function ($scope) {});
 
 'use strict';
@@ -42,6 +32,16 @@ app.config(function ($stateProvider) {
 		url: '/about-us',
 		templateUrl: 'js/about-us/about-us.template.min.html',
 		controller: 'AboutCtrl'
+	});
+});
+
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('404', {
+		url: '/404',
+		templateUrl: 'js/404/404.template.min.html'
 	});
 });
 

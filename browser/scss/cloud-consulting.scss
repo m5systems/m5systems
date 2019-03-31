@@ -2,6 +2,7 @@ $cloud-consulting-graphic-mobile: 767px;
 
 .cloud-consulting {
 	@extend .standard__section;
+	margin-top: 10px;
 	counter-reset: headings;
 
 	&__header {
@@ -35,11 +36,16 @@ $cloud-consulting-graphic-mobile: 767px;
 			margin-top: 20px;
 			padding: 10px;
 			border: 1px solid black;
+			border-radius: 10px;
 			line-height: 1.5;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			counter-reset: section;
+
+			@media all and (max-width: 450px) {
+				flex-direction: column;
+			}
 
 			&:nth-child(2n+1) {
 				background-color: rgb(180, 180, 180);
@@ -87,12 +93,46 @@ $cloud-consulting-graphic-mobile: 767px;
 			}
 
 			img {
-
+				padding: 15px;
 			}
 		}
 
 	}
 
+	&__bullets {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-between;
+
+		&__list {
+			margin: 20px;
+			width: 30%;
+
+			h3 {
+
+			}
+
+			details {
+
+			}
+
+			summary {
+
+			}
+
+			ul {
+				li {
+					margin: 10px 0;
+
+				}
+			}
+		}
+
+	}
+
+	h2 {
+		// margin-top: 30px;
+	}
 
 	&__graphic {
 		margin-top: 15px;

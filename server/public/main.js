@@ -229,20 +229,6 @@ app.config(function ($stateProvider) {
 
 'use strict';
 
-app.controller('NetworkSecurityCtrl', function ($scope) {});
-
-'use strict';
-
-app.config(function ($stateProvider) {
-	$stateProvider.state('network-security', {
-		url: '/solutions-and-services/network-security',
-		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
-		controller: 'NetworkSecurityCtrl'
-	});
-});
-
-'use strict';
-
 app.controller('StaffAugmentationCtrl', function ($scope) {});
 
 'use strict';
@@ -280,6 +266,20 @@ app.config(function ($stateProvider) {
 		url: '/solutions-and-services/wireless-networks',
 		templateUrl: 'js/solutions-and-services/wireless-networks/wireless-networks.template.min.html',
 		controller: 'WirelessNetworksCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('NetworkSecurityCtrl', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('network-security', {
+		url: '/solutions-and-services/network-security',
+		templateUrl: 'js/solutions-and-services/network-security/network-security.template.min.html',
+		controller: 'NetworkSecurityCtrl'
 	});
 });
 //# sourceMappingURL=sourcemaps/main.js.map

@@ -9,7 +9,7 @@ $media-query-two: 900px;
 	&__header {
 		@extend .standard__header;
 		margin: 0;
-		height: calc(70vh - 118px);
+		min-height: calc(70vh - 118px);
 		background-image: url('images/home-background.jpg');
 
 		&__title {
@@ -18,6 +18,10 @@ $media-query-two: 900px;
 			width: 80%;
 			background: rgba(0,0,0,0.85);
 			border-radius: 10px;
+
+			@media all and (max-width: 500px) {
+				font-size: 30px;
+			}
 		}
 	}
 

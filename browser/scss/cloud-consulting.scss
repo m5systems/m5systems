@@ -59,9 +59,9 @@ $cloud-consulting-graphic-mobile: 767px;
 				&::before {
 					margin-right: 10px;
 					width: 10%;
-					// height: 50px;
-					background: var(--counter-color);
+					background: white;
 					border-radius: 10px;
+					box-shadow: 2px 2px 6px 0.5px black;
 					font-size: 30px;
 					counter-increment: headings;
 					content: counter(headings);
@@ -78,9 +78,9 @@ $cloud-consulting-graphic-mobile: 767px;
 				&::after {
 					margin-left: 10px;
 					width: 10%;
-					// height: 50px;
-					background: var(--counter-color);
+					background: white;
 					border-radius: 10px;
+					box-shadow: 2px 2px 6px 0.5px black;
 					font-size: 30px;
 					counter-increment: headings;
 					content: counter(headings);

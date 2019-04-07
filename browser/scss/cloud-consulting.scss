@@ -8,7 +8,7 @@ $cloud-consulting-graphic-mobile: 767px;
 	&__header {
 		@extend .standard__header;
 		margin-bottom: 30px;
-		background-image: url("images/headers/cloud-consulting-header.jpg");
+		background-image: url("images/headers/cloud-consulting-header.jpg") !important;
 
 		&__title {
 			@extend .standard__title;
@@ -16,15 +16,19 @@ $cloud-consulting-graphic-mobile: 767px;
 		}
 	}
 
+	--background-color: #dcdbcd;
+	--header-color: #167cb1;
+
 	&__methodology {
 
 		&__title {
-			margin: 0 auto 5px auto;
-			max-width: 500px;
-			width: 300px;
-			padding: 10px;
-			background: rgb(50, 140, 190);
+			margin: 0 auto 15px auto;
+			max-width: 550px;
+			padding: 20px 10px;
+			background: var(--header-color);
+			box-shadow: 0 0 5px black;
 			border-radius: 5px;
+			font-size: 34px;
 			text-align: center;
 			color: white;
 		}
@@ -37,7 +41,7 @@ $cloud-consulting-graphic-mobile: 767px;
 		.container {
 			margin-top: 20px;
 			padding: 10px;
-			border: 1px solid black;
+			box-shadow: 0 0 5px black;
 			border-radius: 10px;
 			line-height: 1.5;
 			display: flex;
@@ -50,11 +54,14 @@ $cloud-consulting-graphic-mobile: 767px;
 			}
 
 			&:nth-child(2n+1) {
-				background-color: rgb(180, 180, 180);
+				background-color: var(--background-color);
 
 				&::before {
-					width: 50px;
-					height: 50px;
+					margin-right: 10px;
+					width: 10%;
+					// height: 50px;
+					background: var(--counter-color);
+					border-radius: 10px;
 					font-size: 30px;
 					counter-increment: headings;
 					content: counter(headings);
@@ -66,11 +73,14 @@ $cloud-consulting-graphic-mobile: 767px;
 			}
 
 			&:nth-child(2n) {
-				background-color: rgb(220, 220, 220);
+				background-color: var(--background-color);
 
 				&::after {
-					width: 50px;
-					height: 50px;
+					margin-left: 10px;
+					width: 10%;
+					// height: 50px;
+					background: var(--counter-color);
+					border-radius: 10px;
 					font-size: 30px;
 					counter-increment: headings;
 					content: counter(headings);
@@ -83,10 +93,15 @@ $cloud-consulting-graphic-mobile: 767px;
 			.text {
 				margin: 0 auto;
 				max-width: 800px;
-				width: 80%;
+				width: calc(100% - 170px - 10%);
+
+				@media all and (max-width: 450px) {
+					width: 100%;
+				}
 
 				h2 {
 					text-align: center;
+					font-weight: 800;
 				}
 
 				p {
@@ -95,7 +110,9 @@ $cloud-consulting-graphic-mobile: 767px;
 			}
 
 			img {
-				padding: 15px;
+				width: 150px;
+				padding: 10px;
+				// border-radius: 10px;
 			}
 		}
 

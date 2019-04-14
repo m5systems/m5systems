@@ -125,7 +125,7 @@
 		}
 
 		.active {
-			height: 180px;
+			height: 210px;
 			opacity: 1;
 			transform: translateY(0);
 
@@ -139,6 +139,10 @@
 					margin: 5px;
 					font-size: 22px;
 					cursor: pointer;
+				}
+
+				a {
+					color: black;
 				}
 			}
 		}

@@ -39,7 +39,9 @@
     "stylelint-order": "^0.4.4"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "browser-sync": "^2.18.12",
+    "eslint-plugin-react": "^7.12.4",
     "gulp-html5-lint": "^1.1.0",
     "pre-commit": "^1.2.2"
   },

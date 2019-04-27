@@ -144,6 +144,16 @@ app.config(function ($stateProvider) {
 	});
 });
 
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('pdf', {
+		url: '/pdf',
+		templateUrl: 'js/pdf/pdf.template.min.html'
+	});
+});
+
 app.directive('navbar', function ($rootScope, $state) {
 
 	return {
@@ -158,16 +168,6 @@ app.directive('navbar', function ($rootScope, $state) {
 			};
 		}
 	};
-});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('pdf', {
-		url: '/pdf',
-		templateUrl: 'js/pdf/pdf.template.min.html'
-	});
 });
 
 'use strict';
@@ -196,6 +196,20 @@ app.config(function ($stateProvider) {
 		url: '/testimonials',
 		templateUrl: 'js/testimonials/testimonials.template.min.html',
 		controller: 'TestimonialsCtrl'
+	});
+});
+
+'use strict';
+
+app.controller('AwsIframe', function ($scope) {});
+
+'use strict';
+
+app.config(function ($stateProvider) {
+	$stateProvider.state('aws', {
+		url: 'aws-partnership',
+		templateUrl: 'js/aws-iframe/aws-iframe.template.min.html',
+		controller: 'AwsIframe'
 	});
 });
 

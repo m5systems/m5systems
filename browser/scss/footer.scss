@@ -18,16 +18,26 @@
 	}
 
 	&__info {
-
 		p, address {
 			margin: 10px;
 		}
 	}
 
 	&__legal {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
 		a {
+			margin: 5px 0;
 			color: white;
 			text-decoration: none;
+			transition: color .2s ease;
+
+			&:hover {
+				color: lighten($m5-red, 10%);
+			}
 		}
 	}
 

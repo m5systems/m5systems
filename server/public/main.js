@@ -158,6 +158,16 @@ app.config(function ($stateProvider) {
 	});
 });
 
+'use strict';
+
+// Register a state called timer
+app.config(function ($stateProvider) {
+	$stateProvider.state('pdf', {
+		url: '/pdf',
+		templateUrl: 'js/pdf/pdf.template.min.html'
+	});
+});
+
 app.directive('navbar', function ($rootScope, $state) {
 
 	return {
@@ -172,16 +182,6 @@ app.directive('navbar', function ($rootScope, $state) {
 			};
 		}
 	};
-});
-
-'use strict';
-
-// Register a state called timer
-app.config(function ($stateProvider) {
-	$stateProvider.state('pdf', {
-		url: '/pdf',
-		templateUrl: 'js/pdf/pdf.template.min.html'
-	});
 });
 
 app.controller('PrivacyCtrl', function ($scope) {});
